@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-16>
-#+lastmod: <2026-02-16 10:57>
+#+lastmod: <2026-02-16 19:05>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -27,7 +27,6 @@
 * Overall view
 
 Previous professor was extremely bad at explaining, his lecture notes are completely unreadable. This resulted in a huge confusion among all students. Later on he was substituted by other professor (who teaches better), but the substitution was done some kind of abrupt and left a general perception of this course to be extremely vague. As half of the course was tought by professor and another by the new. Even the new exam date is not established, but assumed to be in two weeks.
-
 
 * RESOURCE HIERARCHY
 

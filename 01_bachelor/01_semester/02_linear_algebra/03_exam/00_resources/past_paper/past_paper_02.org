@@ -1,0 +1,340 @@
+#+title: Past Paper 02
+#+author: Erik An
+#+email: obluda2173@gmail.com
+#+date: <2026-02-16>
+#+lastmod: <2026-02-16 19:53>
+#+latex: \newpage
+#+latex_header: \setlength{\parindent}{0pt}
+#+latex_header: \setlength{\parskip}{1em}
+#+latex_header: \usepackage{amsmath}
+#+latex_header: \usepackage{amssymb}
+#+latex_header: \usepackage{amsthm}
+#+latex_header: \usepackage[margin=1in]{geometry}
+#+options: num:t
+#+startup: overview latexpreview inlineimages
+
+1. Is the set $\mathbb{R}^{2}$ with the component-wise defined operations a field?
+   $$\begin{pmatrix}x_{1}\\ x_{2}\end{pmatrix} + \begin{pmatrix}y_{1}\\ y_{2}\end{pmatrix} = \begin{pmatrix}x_{1}+y_{1}\\ x_{2}+y_{2}\end{pmatrix}$$
+   $$\begin{pmatrix}x_{1}\\ x_{2}\end{pmatrix} \cdot \begin{pmatrix}y_{1}\\ y_{2}\end{pmatrix} = \begin{pmatrix}x_{1}y_{1}\\ x_{2}y_{2}\end{pmatrix}$$
+
+2. Let the field $\mathbb{Z}_{p}$ be given for $p$ prime, and consider the vector space $\mathbb{Z}_{p}^{n}$ for $n\ge2$.
+   For $0 \ne (v_{1}, \dots, v_{n}) =: v \in \mathbb{Z}_{p}^{n}$ and $Q := (Q_{1}, \dots, Q_{n}) \in \mathbb{Z}_{p}^{n}$, we define the line $g_{Q,v}$ in the direction $v$ through $Q$ as the set:
+
+   $$g_{Q,v} := \{Q+rv \mid r \in \mathbb{Z}_{p}\}$$
+
+   Determine the set of all lines in the vector spaces $\mathbb{Z}_{2}^{3}$ and $\mathbb{Z}_{3}^{2}$.
+   Make a sketch.
+
+3. Let $V$ be a vector space over $K$ and $X$ be a non-empty set.
+   Show that the set of functions $\mathcal{F}(X,V)$ from $X$ to $V$ constitutes a vector space under pointwise operations.
+   Use different symbols for all occurring operations during the verification.
+
+4. Are the following subsets of $\mathbb{R}^{3}$ subspaces (with justification)?
+
+   (a) $\{(x,y,z) \mid y=0\}$
+
+   (b) $\{(x,y,z) \mid x=1\}$
+
+   (c) $\{(x,y,z) \mid x=0 \text{ or } y=0 \text{ or } z=0\}$
+
+   (d) $\{(x,y,z) \mid ax+by=cz\}$ for fixed $a, b, c \in \mathbb{R}$.
+
+   (e) $\{(x,y,z) \mid x^{2}+y^{2}=z\}$
+
+5. Let $K$ be a field. Show that the vector space $K$ over the field $K$ possesses only the trivial subspaces $\{0\}$ and $K$.
+
+6. Let $V$ be a vector space over $K$ and $W$ a subspace of $V$.
+
+   Then $W$ itself is again a vector space over $K$. Let $U$ be a subspace of $W$.
+
+   Show that $U$ is then also a subspace of $V$.
+
+7. Show directly that the functions $f,g \colon \mathbb{R} \rightarrow \mathbb{R}$, given by $f(x) := 3x+5$ and $g(x)=x^{2}$, are not linear maps.
+
+   Determine all linear maps $f \in L(\mathbb{R},\mathbb{R})$.
+
+8. Which of the following maps is linear?
+
+   (a) $f_{1} \colon \mathbb{R}^{3} \rightarrow \mathbb{R}$, $(x,y,z) \mapsto 4x+3y-15z$
+
+   (b) $f_{2} \colon \mathbb{R}^{3} \rightarrow \mathbb{R}$, $(x,y,z) \mapsto 2x+y-2z+5$
+
+   (c) $f_{3} \colon \mathbb{R}^{3} \rightarrow \mathbb{R}^{2}$, $(x, y, z) \mapsto (x+y-z, 3x+15z)$
+
+   (d) $f_{4} \colon \mathbb{Z}_{2}^{3} \rightarrow \mathbb{Z}_{2}^{2}$, $(x,y,z) \mapsto (x^{2}+2xz+z^{2}+x+z, x^{2}+y^{2}+z^{2})$
+
+   (e) $f_{5} \colon \mathbb{C}^{3} \rightarrow \mathbb{C}^{2}$, $(x,y,z) \mapsto (x^{2}+2xz+z^{2}+x+z, x^{2}+y^{2}+z^{2})$
+
+9. Investigate the map $\mathbb{C} \rightarrow \mathbb{C}$, $z \mapsto \overline{z}$, which assigns the complex conjugate to a complex number.
+
+   Show that this map is linear if $\mathbb{C}$ is viewed as a vector space over $\mathbb{R}$.
+
+   Is this also the case if one views $\mathbb{C}$ as a vector space over $\mathbb{C}$?
+
+   What is the situation if $\mathbb{C}$ is viewed as a vector space over $\mathbb{Q}$?
+
+10. Let $\mathcal{F}_{\mathbb{R}} := \mathbb{R}^{\mathbb{N}} := \{(x_{n})_{n} := (x_{0},x_{1},x_{2}, \dots) \mid x_{i} \in \mathbb{R}\}$ be the set of all real number sequences.
+
+    Show that $\mathcal{F}_{\mathbb{R}}$ forms a vector space over $\mathbb{R}$ with component-wise addition and scalar multiplication:
+
+    $$(x_{0},x_{1},x_{2}, \dots) + (y_{0},y_{1},y_{2}, \dots) := (x_{0}+y_{0}, x_{1}+y_{1}, x_{2}+y_{2}, \dots)$$
+
+    $$r \cdot (x_{0},x_{1},x_{2}, \dots) := (rx_{0}, rx_{1}, rx_{2}, \dots)$$
+
+    for all $(x_{n})_{n},(y_{n})_{n}$ and $r \in \mathbb{R}$, and investigate whether the subset $c$ of all convergent sequences forms a subspace.
+
+    Let $c := \{(x_{n})_{n} \mid \exists \lim_{n \rightarrow \infty}x_{n}=x \in \mathbb{R}\}$.
+
+    Let $c_{0}$ be the set of all null sequences (sequences converging to 0).
+
+    What holds for $c_{0}$ (regarding vector space properties)?
+
+    Is the map $\lim \colon c \rightarrow \mathbb{R}$ with $(x_{n})_{n} \mapsto \lim_{n \rightarrow \infty}x_{n}$ a linear map?
+
+11. Analogous to Problem 10, consider the set of all sequences $\mathcal{F}_{\mathbb{K}}=\mathbb{K}^{\mathbb{K}}$ of elements of a field $K$.
+
+    Justify why $\mathcal{F}_{\mathbb{K}}$ is a vector space. Show that the subset of all sequences $\mathbb{K}^{(\mathbb{N})}$, which have only finitely many non-zero terms, is a subspace.
+
+    $$\mathbb{K}^{(\mathbb{N})} := \{(x_{n})_{n} \in \mathcal{F}_{\mathbb{K}} \mid \exists N \ge 0 : \forall k \ge N : x_{k}=0\}$$
+
+    Recall the definition of a polynomial over $K$ from the lecture.
+
+    Clarify for yourself: A polynomial $p = \sum_{k=0}^{n}c_{k}X^{k}$ is uniquely determined by the (infinitely extended) sequence of its coefficients $p \sim (c_{0},c_{1},c_{2}, \dots)$ (here all sequence terms $c_{k}$ with $k > \deg p$ are equal to 0).
+
+    Show that the vector space $\mathbb{K}[X]$ of polynomials over $K$ is isomorphic to $\mathbb{K}^{(\mathbb{N})}$.
+
+12. From school, you know the multiplication of two real polynomials $p$ and $q$.
+
+    Provide an operation corresponding to this product $p \cdot q$ that is defined on $\mathbb{K}^{(\mathbb{N})}$, i.e., uses only the coefficients and not the variable $X$.
+
+    (Hint: The sought expression is, for each coefficient of the resulting sequence, a sum of products of elements from $K$.) Show that $\mathbb{K}^{(\mathbb{N})}$ forms an integral domain and a $K$ -Algebra with addition and the multiplication defined in this way.
+
+13. Let $\mathbb{R}[X]$ be the vector space of polynomials with real coefficients.
+
+    Show that the functions $D \colon \mathbb{R}[X] \rightarrow \mathbb{R}[X]$ with $D(\sum_{k}a_{k}X^{k}) = \sum_{k}ka_{k}X^{k-1}$ and $M \colon \mathbb{R}[X] \rightarrow \mathbb{R}[X]$ with $M(\sum_{k}a_{k}X^{k}) = \sum_{k}a_{k}X^{k+1}$ are linear, and determine $\operatorname{Ker}(D)$, $\operatorname{Ker}(M)$, $\operatorname{Im}(D)$, and $\operatorname{Im}(M)$.
+
+    What kind of maps are these? Show that for all $n>0$, $D \circ M^{n} - M^{n} \circ D = nM^{n-1}$ holds, where $M^{0} := \operatorname{id}$ and $M^{k+1} := M \circ M^{k}$.
+
+14. (a) Let $f \colon V \rightarrow W$ be a linear map between two $K$ -vector spaces.
+
+    Show that for any arbitrary further $K$ -vector space $U$, a linear map $f_{*} \colon L(U,V) \rightarrow L(U,W)$ is defined by $f_{*}(g) := f \circ g$.
+
+    (b) Let $f \colon V \rightarrow W$ be a linear map between two $K$ -vector spaces.
+
+    Show that for any arbitrary further $K$ -vector space $Z$, a linear map $f^{*} \colon L(W,Z) \rightarrow L(V,Z)$ is defined by $f^{*}(g) := g \circ f$.
+
+15. (a) Determine the products $AB$, $BA$, and $(AB)^{2}=ABAB$ for the following matrices $A$ and $B$ over $\mathbb{Z}_{5}$.
+
+    $$A = \begin{pmatrix}3&2&4\\ 3&2&0\end{pmatrix}$$
+    $$B = \begin{pmatrix}4&4\\ 4&3\\ 2&4\end{pmatrix}$$
+
+    Can one form $A^{2}=AA$ or $B^{2}=BB$?
+
+    (b) Calculate the products $Ax$ and $Ay$ for $A = \begin{pmatrix}1&i&2-i&-3i\\ 0&3+2i&-1&1-2i\end{pmatrix} \in M_{2,4}(\mathbb{C})$ and $x = \begin{pmatrix}1\\ -i\\ -1\\ 1+3i\end{pmatrix}$, $y = \begin{pmatrix}-2\\ 1+i\\ 0\\ i\end{pmatrix} \in \mathbb{C}^{4}$.
+
+    (c) Calculate $A^{2}=AA$ and $A^{3}$ for $A = \begin{pmatrix}2&3\\ 3&-2\end{pmatrix} \in M_{2}(\mathbb{R})$. Does anything change if one views $A$ as an element of $M_{2}(\mathbb{Z}_{13})$?
+
+16. (a) Find a $3 \times 3$ matrix $A$ over $\mathbb{R}$ such that $A$ and $A^{2}$ are not the null matrix, but $A^{3}$ is the null matrix.
+
+    Is this also possible for $2 \times 2$ matrices? Instruction: Look for a suitable linear map $\mathbb{R}^{3} \rightarrow \mathbb{R}^{3}$.
+
+    (b) A matrix $N \in M_{n}(\mathbb{K})$ is called nilpotent if there exists a $k \in \mathbb{N}$ such that $N^{k}=0$ (the null matrix).
+
+    Show that $I - N$ is then invertible and that:
+
+    $$(I-N)^{-1} = \sum_{j=0}^{k-1}N^{j}$$
+
+17. For which $b_{1}, b_{2}, b_{3} \in \mathbb{C}$ does the following linear system of equations possess a solution over $\mathbb{C}$?
+
+    $$9x_{1}-7ix_{2}+8x_{3}=b_{1}$$
+    $$-ix_{1}-2x_{2}+x_{3}=b_{2}$$
+    $$ix_{1}-8x_{2}+(11+16i)x_{3}=b_{3}$$
+
+    Calculate the solution depending on the $b_{i}$.
+
+18. Determine the set of all solutions of the following linear system of equations for $b_{1}, b_{2} \in \mathbb{Z}_{5}$.
+
+    $$4x_{1}+3x_{2}=b_{1}$$
+    $$2x_{1}+3x_{2}=b_{2}$$
+
+19. Determine the inverse matrix of the following over $\mathbb{Z}_{7}$.
+
+    $$\begin{pmatrix}1&2&1\\ 2&4&5\\ 1&0&5\end{pmatrix}$$
+
+20. Determine the kernel and image, as well as the matrix representation, of the linear map $f \colon \mathbb{R}^{3} \rightarrow \mathbb{R}^{3}$ given by:
+
+    $$\begin{pmatrix}x\\ y\\ z\end{pmatrix} \mapsto \begin{pmatrix}5x+19y+2z\\ x-4y+z\\ 3x+y+2z\end{pmatrix}$$
+
+21. Investigate whether the set $\{(2, 1, 3), (1, 1,0), (3,0, 4)\}$ is a generating set for $\mathbb{R}^{3}$.
+
+    Is it a generating set for $\mathbb{Q}^{3}$ or $\mathbb{C}^{3}$?
+
+22. Show directly that the polynomials $B_{0}=X^{2}$, $B_{1}=-2X^{2}+2X$, and $B_{2}=X^{2}-2X+1$ are linearly independent in $\mathbb{R}[X]$.
+
+    Show furthermore that they are a generating set for $\mathbb{R}_{2}[X]$. Calculate $B_{0}+B_{1}+B_{2}$.
+
+23. Show that the set $\{X^{k} \mid k \in \mathbb{N}\}$ forms a basis for the vector space $\mathbb{K}[X]$ over an arbitrary field $K$.
+
+    Conclude from this that $\mathbb{K}[X]$ is not finitely generated.
+
+24. Show that the set $C^{0}(\mathbb{R},\mathbb{R})$ of continuous functions from $\mathbb{R}$ to $\mathbb{R}$ forms a vector space, and show that the set $\{e^{kx} \mid k \in \mathbb{Z}\}$ is linearly independent in $C^{0}(\mathbb{R},\mathbb{R})$.
+
+25. Check whether the set $\{(0, 1, 1), (1, -1, 0), (1, 0, 1)\}$ is linearly independent in $\mathbb{R}^{3}$.
+
+    Is it linearly independent in $\mathbb{C}^{3}$, or in $\mathbb{Z}_{2}^{3}$?
+
+26. Let $V$ be a $K$ -vector space, and let $\{W_{i} \mid i \in I\}$ be a non-empty family of subspaces of $V$, such that for all pairs $(i,j) \in I^{2}$ there exists a $k \in I$ with $W_{i} \cup W_{j} \subseteq W_{k}$.
+
+    Show that $\bigcup_{i \in I}W_{i}$ is a subspace of $V$. What about the converse of this statement?
+
+27. Let $V$ be an $n$ -dimensional vector space over a field $K$ and $W$ a subspace of dimension $n-1$.
+
+    Show:
+
+    (a) There exists a linear map $f \colon V \rightarrow \mathbb{K}$ such that $W = \operatorname{Ker}(f)$.
+
+    (b) If $g \colon V \rightarrow \mathbb{K}$ is another linear map with $\operatorname{Ker}(g)=W$, then there exists an element $r \in \mathbb{K} \setminus \{0\}$ such that $g(v)=rf(v)$ for all $v \in V$.
+
+    Instruction for (a): Extend a basis for $W$ to a basis for $V$ and define $f$ on the elements of this basis.
+
+28. Let $V$ be an $n$ -dimensional vector space over a field $K$ and $W$ a $k$ -dimensional subspace of $V$.
+
+    Show:
+
+    (a) There exists a (surjective) linear map $f \colon V \rightarrow \mathbb{K}^{n-k}$ such that $W = \operatorname{Ker}(f)$.
+
+    (b) If $g \colon V \rightarrow \mathbb{K}^{n-k}$ is another linear map with $W = \operatorname{Ker}(g)$, then there exists a (unique) linear isomorphism $\varphi \colon \mathbb{K}^{n-k} \rightarrow \mathbb{K}^{n-k}$ such that $g = \varphi \circ f$.
+
+    (c) There exists an (injective) linear map $f \colon \mathbb{K}^{k} \rightarrow V$ such that $W = \operatorname{Im}(f)$.
+
+    (d) If $g \colon \mathbb{K}^{k} \rightarrow V$ is another linear map with $W = \operatorname{Im}(g)$, then there exists a (unique) linear isomorphism $\varphi \colon \mathbb{K}^{k} \rightarrow \mathbb{K}^{k}$ such that $g = f \circ \varphi$.
+
+29. (a) Determine a complement to the plane $\{(x,y,z) \mid 3x+4y-z=0\}$ in $\mathbb{R}^{3}$.
+
+    (b) Show that every line $g_{b} := \{(t,tb,0) \mid t \in \mathbb{R}\}$ with $b \in \mathbb{R} \setminus \{0\}$ is a complement for the plane $\{(x,0,z) \mid x,z \in \mathbb{R}\}$.
+
+30. Let $n \in \mathbb{N}$ and $p \in \mathbb{R}[X]$ with $\deg(p)=n+1$. Let $p \cdot \mathbb{R}[X]$ denote the set of all polynomials divisible by $p$.
+
+    Show:
+
+    (a) $p \cdot \mathbb{R}[X]$ is a subspace of $\mathbb{R}[X]$.
+
+    (b) $\mathbb{R}_{n}[X]$ and $p \cdot \mathbb{R}[X]$ are complementary in $\mathbb{R}[X]$.
+
+31. Show that the sets of even functions $\mathcal{F}_{g}(\mathbb{R},\mathbb{R}) := \{f \in \mathcal{F}(\mathbb{R},\mathbb{R}) \mid \forall x \in \mathbb{R} : f(x)=f(-x)\}$ and of odd functions $\mathcal{F}_{u}(\mathbb{R},\mathbb{R}) := \{f \in \mathcal{F}(\mathbb{R},\mathbb{R}) \mid \forall x \in \mathbb{R} : f(x)=-f(-x)\}$ are complementary in $\mathcal{F}(\mathbb{R},\mathbb{R})$.
+
+    Do not forget to show that $\mathcal{F}_{g}(\mathbb{R},\mathbb{R})$ and $\mathcal{F}_{u}(\mathbb{R},\mathbb{R})$ are subspaces.
+
+32. Let $V$ be a finitely generated $K$ -vector space, $W \subset V$ a subspace.
+
+    Show that there exists a projection onto $W$, i.e., a linear map $\pi \colon V \rightarrow W$, such that $\pi(w)=w$ for all $w \in W$.
+
+    Show furthermore that $\operatorname{Ker}(\pi) \subset V$ is a complement to $W$. Can every complement be obtained this way?
+
+33. Determine the rank of the matrix over $\mathbb{R}$.
+
+    $$\begin{pmatrix}3&4&1&8&9\\ -2&0&2&3&0\\ 1&2&-1&1&2\\ 7&8&-3&7&13\end{pmatrix}$$
+
+    What is the rank over $\mathbb{Z}_{17}$?
+
+34. (a) Consider the standard basis $\mathcal{S}$ and the basis $\mathcal{B} := \{(1,3), (2,2)\}$ of $\mathbb{Z}_{5}^{2}$.
+
+    Calculate the change-of-basis maps from $\mathcal{S}$ to $\mathcal{B}$ and vice versa.
+
+    Determine the coordinate vector $[v]_{\mathcal{B}}$ for the vector $v=(2,4)$ (relative to the standard basis).
+
+    For the linear map $f \colon \mathbb{Z}_{5}^{2} \rightarrow \mathbb{Z}_{5}^{2}$ with $(x,y) \mapsto (3x+2y, 4x+y)$, determine the matrix representations $[f]_{\mathcal{S}}^{\mathcal{B}}$ and $[f]_{\mathcal{B}}^{\mathcal{B}}$.
+
+    (b) Consider the standard basis $\mathcal{S}$ and the bases $\mathcal{B} := \{(1,1,0), (0,-1,1), (-1,0,1)\}$ and $\tilde{\mathcal{B}} := \{(2,0,1), (1,1,1), (-1,3,0)\}$ of $\mathbb{R}^{3}$.
+
+    Determine the change-of-basis maps from $\mathcal{B}$ to $\mathcal{\tilde{B}}$, from $\mathcal{B}$ to $\mathcal{S}$, and from $\mathcal{\tilde{B}}$ to $\mathcal{S}$.
+
+    Determine the coordinate vectors $[v]_{\mathcal{B}}$ and $[v]_{\mathcal{\tilde{B}}}$ for the vector $v=(1,4,2)$ (relative to the standard basis).
+
+    For the linear map $f \colon \mathbb{R}^{3} \rightarrow \mathbb{R}^{3}$ with $(x,y,z) \mapsto (3x+2z, x-4y, 6y-z)$, determine the matrix representations $[f]_{\mathcal{S}}^{\mathcal{S}}$, $[f]_{\mathcal{S}}^{\mathcal{\tilde{B}}}$, and $[f]_{\mathcal{B}}^{\mathcal{\tilde{B}}}$.
+
+35. Show that there exist real numbers $r_{0},r_{1},r_{2} \in \mathbb{R}$ such that for every polynomial $p \in \mathbb{R}_{2}[X]$, the associated polynomial function $p \colon \mathbb{R} \rightarrow \mathbb{R}$ satisfies the equation $p(-1)=r_{0}p(0)+r_{1}p(1)+r_{2}p(2)$.
+
+    Determine these numbers explicitly.
+
+36. Show that there exist real numbers $s_{0}, s_{1}, s_{2} \in \mathbb{R}$ such that for every polynomial $p \in \mathbb{R}_{2}[X]$, the associated polynomial function $p \colon \mathbb{R} \rightarrow \mathbb{R}$ satisfies the equation:
+
+    $$D(p)(0)=s_{0}p(-2)+s_{1}p(0)+s_{2}p(2)$$
+
+    where $D \colon \mathbb{R}_{2}[X] \rightarrow \mathbb{R}_{2}[X]$ is the (formal) derivative operator on the polynomials.
+
+37. Consider the vector space $\mathbb{R}_{3}[X]$. Show that the polynomials $B_{3,i} := \binom{3}{i}X^{i}(1-X)^{3-i}$ for $i=0, \dots, 3$ form a basis $\mathcal{B}$.
+
+    Determine the change-of-basis maps $[\operatorname{id}]_{\mathcal{B}}^{\mathcal{S}}$ and $[\operatorname{id}]_{\mathcal{S}}^{\mathcal{B}}$, and calculate $[1]_\mathcal{B}$ and $[D]_{\mathcal{B}}^{\mathcal{B}}$, where $D \colon \mathbb{R}_{3}[X] \rightarrow \mathbb{R}_{3}[X]$ denotes the (formal) derivative operator and $\mathcal{S} := \{1, X, X^{2}, X^{3}\}$ the standard basis.
+
+38. Consider the matrix:
+
+    $$A = \begin{pmatrix}4&2&4\\ 6&3&6\end{pmatrix}$$
+
+    Find bases $\mathcal{B}$ and $\mathcal{B}^{\prime}$ such that $[A]_{\mathcal{B}^{\prime}}^{\mathcal{B}} = \mathbb{J}_{r}$ for a suitable $r$ (see Theorem 4.18).
+
+39. Consider the matrix:
+
+    $$A = \begin{pmatrix}1&3&2&-1\\ -1&-1&4&2\\ 1&5&8&0\end{pmatrix}$$
+
+    Find bases $\mathcal{B}$ and $\mathcal{B}^{\prime}$ such that $[A]_{\mathcal{B}^{\prime}}^{\mathcal{B}} = \mathbb{J}_{r}$ for a suitable $r$ (see Theorem 4.18).
+
+40. Let $v_{1}=(1,1,-1)$, $v_{2}=(1,2,4)$, $v_{3}=(3,-1,r)$, $v_{4}=(2,3,s)$ be vectors in $\mathbb{R}^{3}$. Determine $r, s \in \mathbb{R}$ such that $\langle\{v_{1},v_{2}\}\rangle=\langle\{v_{3},v_{4}\}\rangle$.
+
+41. Let $V$ be a $K$ -vector space. We call a linear map $\pi \colon V \rightarrow V$ a projection if $\pi \circ \pi = \pi$.
+
+    Let $\pi$ be a projection. Show that
+
+    (a) $\operatorname{id} - \pi$ is also a projection,
+
+    (b) $\operatorname{Ker}(\pi) = \operatorname{Im}(\operatorname{id}-\pi)$,
+
+    (c) $\operatorname{Im}(\pi) = \operatorname{Ker}(\operatorname{id}-\pi)$,
+
+    (d) $V = \operatorname{Ker}(\pi) \oplus \operatorname{Im}(\pi)$.
+
+42. Consider the subspace $W := \{x \in \mathbb{R}^{3} \mid 2x_{1}+3x_{2}-2x_{3}=0\}$ of $\mathbb{R}^{3}$. Describe the cosets $v+W$ and investigate the vector space operations of $\mathbb{R}^{3}/W$, i.e., describe the arithmetic operations as explicitly as possible.
+
+43. Consider the subspace $W := \langle\{(1,0,1,0), (1,1,0,1)\}\rangle$ of $\mathbb{Z}_{2}^{4}$. Describe the cosets $v+W$ and investigate the vector space operations of $\mathbb{Z}_{2}^{4}/W$.
+
+44. Determine the dual basis of $\mathbb{R}^{3^{*}}$ for the basis $\mathcal{B} := \{(1,2,1), (-1,0,2), (1,-1,0)^{T}\} \subseteq \mathbb{R}^{3}$ and determine the dual map $f^{*}$ for the map $f \colon \mathbb{R}^{3} \rightarrow \mathbb{R}^{3}$, $(x_{1},x_{2},x_{3}) \mapsto (3x_{1}-x_{2}+2x_{3}, -x_{1}+2x_{2}-x_{3}, 5x_{1}+4x_{3})$.
+
+45. Let $U, V$ and $W$ be vector spaces over $K$, and let $f \in L(U,V)$ and $g \in L(V,W)$.
+
+    Show that
+
+    (a) $\operatorname{Ker}(g \circ f) = f^{-1}(\operatorname{Ker}(g))$
+
+    (b) $\operatorname{Ker}(g \circ f) \supseteq \operatorname{Ker}(f)$ with equality if and only if $\operatorname{Ker}(g) \cap \operatorname{Im}(f) = \{0\}$.
+
+    (c) $\operatorname{Im}(g \circ f) \subseteq \operatorname{Im}(g)$ with equality if and only if $\operatorname{Ker}(g) + \operatorname{Im}(f) = V$.
+
+46. Show that the sets $F := \{f \in \mathcal{F}(\mathbb{R},\mathbb{R}) \mid f(1)=0\}$ and $G := \{f \in \mathcal{F}(\mathbb{R},\mathbb{R}) \mid \exists a \in \mathbb{R} : \forall x \in \mathbb{R} : f(x)=ax\}$ are complementary subspaces of $\mathcal{F}(\mathbb{R},\mathbb{R})$.
+
+47. Let $f \colon \mathbb{C}[X] \rightarrow \mathbb{C}[X]$ be the map $p \mapsto p(X+1)-p(X)$. Show that $f$ is linear and determine $\operatorname{Ker}(f)$. Is the map surjective?
+
+    Show furthermore that there exists a basis $(b_{0},b_{1}, \dots)$ of $\mathbb{C}[X]$ such that $f(b_{i+1})=b_{i}$ for all $i \in \mathbb{N}$.
+
+48. Let $V$ be a $K$ -vector space and $p,q \colon V \rightarrow V$ two projections (i.e. $p \circ p = p$).
+
+    Show that $p+q$ is a projection if and only if $p \circ q = q \circ p = 0$.
+
+49. Let the vector space $\mathbb{K}_{n}[X]$ be given, and let $x_{0}, x_{1}, \dots, x_{n}$ be distinct elements of $K$.
+
+    Show that the evaluations $\operatorname{ev}_{x_{i}} \colon \mathbb{K}_{n}[X] \rightarrow \mathbb{K}$, $p \mapsto p(x_{i})$ for $i=0, \dots, n$ form a basis for $\mathbb{K}_{n}[X]^{*}$.
+
+    For which basis is $\operatorname{ev}_{x_{0}}, \dots, \operatorname{ev}_{x_{n}}$ the dual basis?
+
+50. Prove the Theorem of Menelaus: Let three distinct points $A, B$, and $C$ be given in $\mathbb{A}^{2}$, forming a non-degenerate triangle.
+
+    Let $g$ be a line passing through no vertex of the triangle and let $\{D\} = g \cap l(A,B)$, where $l(A,B)$ denotes the line passing through $A$ and $B$.
+
+    Let $\{E\} = g \cap l(B,C)$ and $\{F\} = g \cap l(C,A)$. Then:
+
+    $$\frac{A-D}{B-D}\frac{B-E}{C-E}\frac{C-F}{A-F}=1$$
+
+51. Prove the Theorem of Ceva: Let four distinct points $A, B, C$, and $P$ be given in $\mathbb{A}^{2}$ such that $ABC$ is a non-degenerate triangle.
+
+    Let $\{D\} = l(A,B) \cap l(C,P)$, $\{E\} = l(B,C) \cap l(A,P)$, and $\{F\} = l(C,A) \cap l(B,P)$. Under the assumption that all seven points are distinct:
+
+    $$\frac{A-D}{B-D}\frac{B-E}{C-E}\frac{C-F}{A-F}=-1$$
