@@ -1,0 +1,74 @@
+#+title: Plan
+#+author: Erik An
+#+email: obluda2173@gmail.com
+#+date: <2026-02-16>
+#+lastmod: <2026-02-16 10:57>
+#+latex: \newpage
+#+latex_header: \setlength{\parindent}{0pt}
+#+latex_header: \setlength{\parskip}{1em}
+#+latex_header: \usepackage{amsmath}
+#+latex_header: \usepackage{amssymb}
+#+latex_header: \usepackage{amsthm}
+#+latex_header: \usepackage[margin=1in]{geometry}
+#+options: num:t
+#+startup: overview latexpreview inlineimages
+
+* Resources
+
+- Problem Sets (6 in total)
+- Must know Proofs for the exam (by professor)
+- Past Exam
+- Past Exam (same professor, different bachelor, 2 in total)
+- Lecture Whiteboards Photos (5 lectures)
+- Hard to read Lecture Notes (by professor that was changed)
+- Lecture Videos Part 1 (by previous professor, not the best quality, 10 in total, apprx 1.5 hour each)
+- Lecture Videos Part 2 (by current professor, not the best quality, 14 in total, apprx 1.5 hour each)
+
+* Overall view
+
+Previous professor was extremely bad at explaining, his lecture notes are completely unreadable. This resulted in a huge confusion among all students. Later on he was substituted by other professor (who teaches better), but the substitution was done some kind of abrupt and left a general perception of this course to be extremely vague. As half of the course was tought by professor and another by the new. Even the new exam date is not established, but assumed to be in two weeks.
+
+
+* RESOURCE HIERARCHY
+
+** 1. Must-Know Proofs (Prof B)
+   - RANK: #1 (Primary Truth)
+   - WHY: High ROI; "Free points" & theoretical basis.
+   - ACTION: Memorize immediately.
+
+** 2. Past Exam (Prof B - Current)
+   - RANK: #2
+   - WHY: Only confirmed data point for exam structure/ratio.
+   - ACTION: Take timed run now to expose gaps.
+
+** 3. Problem Sets (All 6)
+   - RANK: #3
+   - WHY: The actual syllabus. Defines examinable topics for Part 1.
+   - ACTION: Solve to pass. Use as search terms for external study if stuck.
+
+** 4. Whiteboard Photos (Prof B)
+   - RANK: #4
+   - WHY: Prof B's written truth. Faster scanning than video.
+
+** 5. Past Exams (Other Bachelor)
+   - RANK: #5
+   - WHY: Pattern recognition (question types/style), not content.
+   - ACTION: Scan to hack psychology. Do not simulate.
+
+** 6. Videos Part 2 (Prof B)
+   - RANK: #6
+   - WHY: Reference library only. Too long (21h).
+
+** 7. Notes (Prof A)
+   - RANK: #7 (Trash)
+   - WHY: Illegible; burns cognitive energy.
+
+** 8. Videos Part 1 (Prof A)
+   - RANK: #8 (Toxic)
+   - WHY: Demoralizing time sink (~15h). Avoid.
+
+* PLAN
+
+- Digitalise 3 exam papers (extract pdfs to org files).
+- Extract "must know proofs" to org file (they are given as chapter links to lecture notes).
+- Write a comprehensive prompt to "reverse engineer" exams, with supplementing must know proofs and problem sets to get all topics to learn and construct a comprehensive plan.
