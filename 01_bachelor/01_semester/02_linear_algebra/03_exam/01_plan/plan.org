@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-16>
-#+lastmod: <2026-02-16 20:10>
+#+lastmod: <2026-02-17 12:06>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -60,4 +60,6 @@
 - [X] Extract "must know proofs" to org file (they are given as chapter links to lecture notes).
   - [X] Extract each pdf pages for easier llm interaction
   - [X] Create a single org file with all full "must know theorems"
-
+- [ ] Digitalise 2 remaining problem sets
+  - [ ] ps_02.org
+  - [ ] ps_03.org
