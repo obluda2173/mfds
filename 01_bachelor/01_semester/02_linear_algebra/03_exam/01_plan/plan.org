@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-16>
-#+lastmod: <2026-02-21 14:04>
+#+lastmod: <2026-02-21 14:23>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -15,7 +15,7 @@
 
 * Day 1: Front-Loading Linear Maps & Matrix Algebra (Basics)
 ** Block A: Active Computation
-- [ ] Open =ps_total.org= and complete Problem 10 (LU Decomposition without pivoting).
+- [ ] Open =ps_04.org= and complete Problem 10 (LU Decomposition without pivoting).
 - Rationale: Building flawless Gaussian Elimination and basic LU mechanics is foundational for everything else in Matrix Algebra.
 ** Block B: Theory & Proof Memorization
 - [ ] Open =must_know_proofs.org= and memorize the Steinitz Exchange Theorem (Theorem III.1.47).
@@ -26,7 +26,7 @@
 
 * Day 2: Matrix Algebra - Inverses & Pivoting
 ** Block A: Active Computation
-- [ ] Open =ps_total.org= and complete Problem 13 (LU with partial pivoting).
+- [ ] Open =ps_05.org= and complete Problem 13 (LU with partial pivoting).
 - Rationale: The Target Exam specifically demands LU factorization *with pivoting*, making this non-negotiable.
 ** Block B: Theory & Proof Memorization
 - [ ] Open =must_know_proofs.org= and memorize the Dimension Theorem / Rank-Nullity (Theorem IV.1.10).
@@ -38,7 +38,7 @@
 
 * Day 3: Linear Maps & Systems Integration
 ** Block A: Active Computation
-- [ ] Open =ps_total.org= and complete Problem 19(a) (Complex Linear Systems).
+- [ ] Open =ps_06.org= and complete Problem 19(a) (Complex Linear Systems).
 - Rationale: The Target Exam integrates complex arithmetic ($\mathbb{C}$ and $i$) heavily into calculation questions.
 ** Block B: Theory & Proof Memorization
 - [ ] Open =must_know_proofs.org= and memorize Kernel and Image properties (Proposition III.2.11).
@@ -50,7 +50,7 @@
 
 * Day 4: Matrix Algebra Mastery & Vector Space Intro
 ** Block A: Active Computation
-- [ ] Open =ps_total.org= and complete Problem 16 (Gaussian elimination and rank).
+- [ ] Open =ps_05.org= and complete Problem 16 (Gaussian elimination and rank).
 - Rationale: Prof B relies on Gaussian elimination to check invertibility and rank, avoiding determinants entirely.
 ** Block B: Theory & Proof Memorization
 - [ ] Open =must_know_proofs.org= and memorize the Dimension Theorem for Sums (Proposition IV.1.4).
@@ -61,7 +61,7 @@
 
 * Day 5: Vector Spaces - Subspaces & Bases
 ** Block A: Active Computation
-- [ ] Open =ps_total.org= and complete Problem 21 (Subspace checks).
+- [ ] Open =ps_06.org= and complete Problem 21 (Subspace checks).
 - Rationale: Vector space questions strictly require verifying if a given set is a subspace.
 ** Block B: Theory & Proof Memorization
 - [ ] Open =must_know_proofs.org= and study Subspace Criteria / Span logic (Theorem III.1.29).
@@ -73,7 +73,7 @@
 
 * Day 6: Linear Systems & Vector Spaces (Independence)
 ** Block A: Active Computation
-- [ ] Open =ps_total.org= and complete Problem 22 (Linear independence and spanning sets).
+- [ ] Open =ps_06.org= and complete Problem 22 (Linear independence and spanning sets).
 - Rationale: Drills polynomial and complex vector independence, which are "Prof A Filter" must-knows.
 ** Block B: Theory & Proof Memorization
 - [ ] Open =must_know_proofs.org= and study Linear Independence/Basis Equivalence logic (Theorem III.1.36).
@@ -85,8 +85,8 @@
 
 * Day 7: Synthesis - Maps & Fields
 ** Block A: Active Computation
-- [ ] Open =ps_total.org= and complete Problem 1 (Verifying field definitions).
-- [ ] Open =ps_total.org= and complete Problem 2(a-c) (Verifying field definitions).
+- [ ] Open =ps_01.org= and complete Problem 1 (Verifying field definitions).
+- [ ] Open =ps_01.org= and complete Problem 2(a-c) (Verifying field definitions).
 - Rationale: The Target Exam shifted significantly toward raw definitions of fields rather than just heavy calculation.
 ** Block B: Theory & Proof Memorization
 - [ ] Open =must_know_proofs.org= and study the Extension of Linear Maps logic (Proposition IV.0.1).
@@ -111,7 +111,7 @@
 
 * Day 9: Timed Mock Exam 1
 ** Block A: Active Computation
-- [ ] Open =ps_total.org= and complete Problem 15 (LU factorization with pivoting).
+- [ ] Open =ps_05.org= and complete Problem 15 (LU factorization with pivoting).
 - Rationale: A quick mechanical warm-up to activate row reduction muscle memory before the clock starts.
 ** Block B: Theory & Proof Memorization
 - [ ] Open =must_know_proofs.org= and quickly review Subspace Criteria (III.1.15).
