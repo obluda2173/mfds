@@ -1,0 +1,355 @@
+#+title: Preparation
+#+author: Erik An
+#+email: obluda2173@gmail.com
+#+date: <2026-02-21>
+#+lastmod: <2026-02-21 14:33>
+#+latex: \newpage
+#+latex_header: \setlength{\parindent}{0pt}
+#+latex_header: \setlength{\parskip}{1em}
+#+latex_header: \usepackage{amsmath}
+#+latex_header: \usepackage{amssymb}
+#+latex_header: \usepackage{amsthm}
+#+latex_header: \usepackage[margin=1in]{geometry}
+#+options: num:t
+#+startup: overview latexpreview inlineimages
+
+* Day 01: Front-Loading Linear Maps & Matrix Algebra (Basics)
+** Block A: Active Computation
+*** Task
+
+*** Solution
+
+*** Review Metrics
+- Time Spent:
+- Confidence (1-5):
+- Mistakes / Takeaways:
+
+** Block B: Theory & Proof Memorization
+*** Task
+
+*** Solution
+
+*** Review Metrics
+- Time Spent:
+- Confidence (1-5):
+- Mistakes / Takeaways:
+
+** Block C: Application/Testing
+*** Task
+
+*** Solution
+
+*** Review Metrics
+- Time Spent:
+- Confidence (1-5):
+- Mistakes / Takeaways:
+
+* Day 02: Matrix Algebra - Inverses & Pivoting
+** Block A: Active Computation
+*** Task
+
+*** Solution
+
+*** Review Metrics
+- Time Spent:
+- Confidence (1-5):
+- Mistakes / Takeaways:
+
+** Block B: Theory & Proof Memorization
+*** Task
+
+*** Solution
+
+*** Review Metrics
+- Time Spent:
+- Confidence (1-5):
+- Mistakes / Takeaways:
+
+** Block C: Application/Testing
+*** Task
+
+*** Solution
+
+*** Review Metrics
+- Time Spent:
+- Confidence (1-5):
+- Mistakes / Takeaways:
+
+* Day 03: Linear Maps & Systems Integration
+** Block A: Active Computation
+*** Task
+
+*** Solution
+
+*** Review Metrics
+- Time Spent:
+- Confidence (1-5):
+- Mistakes / Takeaways:
+
+** Block B: Theory & Proof Memorization
+*** Task
+
+*** Solution
+
+*** Review Metrics
+- Time Spent:
+- Confidence (1-5):
+- Mistakes / Takeaways:
+
+** Block C: Application/Testing
+*** Task
+
+*** Solution
+
+*** Review Metrics
+- Time Spent:
+- Confidence (1-5):
+- Mistakes / Takeaways:
+
+* Day 04: Matrix Algebra Mastery & Vector Space Intro
+** Block A: Active Computation
+*** Task
+
+*** Solution
+
+*** Review Metrics
+- Time Spent:
+- Confidence (1-5):
+- Mistakes / Takeaways:
+
+** Block B: Theory & Proof Memorization
+*** Task
+
+*** Solution
+
+*** Review Metrics
+- Time Spent:
+- Confidence (1-5):
+- Mistakes / Takeaways:
+
+** Block C: Application/Testing
+*** Task
+
+*** Solution
+
+*** Review Metrics
+- Time Spent:
+- Confidence (1-5):
+- Mistakes / Takeaways:
+
+* Day 05: Vector Spaces - Subspaces & Bases
+** Block A: Active Computation
+*** Task
+
+*** Solution
+
+*** Review Metrics
+- Time Spent:
+- Confidence (1-5):
+- Mistakes / Takeaways:
+
+** Block B: Theory & Proof Memorization
+*** Task
+
+*** Solution
+
+*** Review Metrics
+- Time Spent:
+- Confidence (1-5):
+- Mistakes / Takeaways:
+
+** Block C: Application/Testing
+*** Task
+
+*** Solution
+
+*** Review Metrics
+- Time Spent:
+- Confidence (1-5):
+- Mistakes / Takeaways:
+
+* Day 06: Linear Systems & Vector Spaces (Independence)
+** Block A: Active Computation
+*** Task
+
+*** Solution
+
+*** Review Metrics
+- Time Spent:
+- Confidence (1-5):
+- Mistakes / Takeaways:
+
+** Block B: Theory & Proof Memorization
+*** Task
+
+*** Solution
+
+*** Review Metrics
+- Time Spent:
+- Confidence (1-5):
+- Mistakes / Takeaways:
+
+** Block C: Application/Testing
+*** Task
+
+*** Solution
+
+*** Review Metrics
+- Time Spent:
+- Confidence (1-5):
+- Mistakes / Takeaways:
+
+* Day 07: Synthesis - Maps & Fields
+** Block A: Active Computation
+*** Task
+
+*** Solution
+
+*** Review Metrics
+- Time Spent:
+- Confidence (1-5):
+- Mistakes / Takeaways:
+
+** Block B: Theory & Proof Memorization
+*** Task
+
+*** Solution
+
+*** Review Metrics
+- Time Spent:
+- Confidence (1-5):
+- Mistakes / Takeaways:
+
+** Block C: Application/Testing
+*** Task
+
+*** Solution
+
+*** Review Metrics
+- Time Spent:
+- Confidence (1-5):
+- Mistakes / Takeaways:
+
+* Day 08: Synthesis & Pre-Mock Drilling
+** Block A: Active Computation
+*** Task
+
+*** Solution
+
+*** Review Metrics
+- Time Spent:
+- Confidence (1-5):
+- Mistakes / Takeaways:
+
+** Block B: Theory & Proof Memorization
+*** Task
+
+*** Solution
+
+*** Review Metrics
+- Time Spent:
+- Confidence (1-5):
+- Mistakes / Takeaways:
+
+** Block C: Application/Testing
+*** Task
+
+*** Solution
+
+*** Review Metrics
+- Time Spent:
+- Confidence (1-5):
+- Mistakes / Takeaways:
+
+* Day 09: Timed Mock Exam 1
+** Block A: Active Computation (Warm-up)
+*** Task
+
+*** Solution
+
+*** Review Metrics
+- Time Spent:
+- Confidence (1-5):
+- Mistakes / Takeaways:
+
+** Block B: Theory & Proof Memorization (Refresher)
+*** Task
+
+*** Solution
+
+*** Review Metrics
+- Time Spent:
+- Confidence (1-5):
+- Mistakes / Takeaways:
+
+** Block C: Application/Testing (Full Mock Exam)
+*** Task
+
+*** Solution
+
+*** Review Metrics
+- Time Spent:
+- Total Exam Score Estimate:
+- Time Management Assessment:
+- Mistakes / Takeaways:
+
+* Day 10: Timed Mock Exam 2
+** Block A: Active Computation (Warm-up)
+*** Task
+
+*** Solution
+
+*** Review Metrics
+- Time Spent:
+- Confidence (1-5):
+- Mistakes / Takeaways:
+
+** Block B: Theory & Proof Memorization (Refresher)
+*** Task
+
+*** Solution
+
+*** Review Metrics
+- Time Spent:
+- Confidence (1-5):
+- Mistakes / Takeaways:
+
+** Block C: Application/Testing (Full Mock Exam)
+*** Task
+
+*** Solution
+
+*** Review Metrics
+- Time Spent:
+- Total Exam Score Estimate:
+- Time Management Assessment:
+- Mistakes / Takeaways:
+
+* Day 11: Buffer, Review & Rest
+** Block A: Active Computation (Review)
+*** Task
+
+*** Solution
+
+*** Review Metrics
+- Time Spent:
+- Confidence (1-5):
+- Mistakes / Takeaways:
+
+** Block B: Theory & Proof Memorization (Review)
+*** Task
+
+*** Solution
+
+*** Review Metrics
+- Time Spent:
+- Confidence (1-5):
+- Mistakes / Takeaways:
+
+** Block C: Application/Testing (Analysis & Consolidation)
+*** Task
+Review all notes, mistakes, and confidence levels from Days 1-10.
+*** Solution
+- Top 3 recurring calculation errors:
+- Weakest proof(s) to read one last time:
+- Final Strategy / Exam Execution Plan:

@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-16>
-#+lastmod: <2026-02-21 14:23>
+#+lastmod: <2026-02-21 14:33>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -13,7 +13,7 @@
 #+options: num:t
 #+startup: overview latexpreview inlineimages
 
-* Day 1: Front-Loading Linear Maps & Matrix Algebra (Basics)
+* Day 01: Front-Loading Linear Maps & Matrix Algebra (Basics)
 ** Block A: Active Computation
 - [ ] Open =ps_04.org= and complete Problem 10 (LU Decomposition without pivoting).
 - Rationale: Building flawless Gaussian Elimination and basic LU mechanics is foundational for everything else in Matrix Algebra.
@@ -24,7 +24,7 @@
 - [ ] Open =exam_01.org= and complete Problem 5.
 - Rationale: Tests the definitions of Kernel, Image, and Rank alongside the Steinitz proof exactly as Prof B formats them.
 
-* Day 2: Matrix Algebra - Inverses & Pivoting
+* Day 02: Matrix Algebra - Inverses & Pivoting
 ** Block A: Active Computation
 - [ ] Open =ps_05.org= and complete Problem 13 (LU with partial pivoting).
 - Rationale: The Target Exam specifically demands LU factorization *with pivoting*, making this non-negotiable.
@@ -36,7 +36,7 @@
 - [ ] Open =exam_01.org= and complete Problem 4.
 - Rationale: Directly tests LU factorization and matrix inversion via elementary row operations in the exact Target Exam format.
 
-* Day 3: Linear Maps & Systems Integration
+* Day 03: Linear Maps & Systems Integration
 ** Block A: Active Computation
 - [ ] Open =ps_06.org= and complete Problem 19(a) (Complex Linear Systems).
 - Rationale: The Target Exam integrates complex arithmetic ($\mathbb{C}$ and $i$) heavily into calculation questions.
@@ -48,7 +48,7 @@
 - [ ] Open =past_paper_01.org=, go to the 1st Exam Date, and complete Problem 3.
 - Rationale: Drills the Rank-Nullity proof and matrix inversions under the pressure of an alternative past paper format.
 
-* Day 4: Matrix Algebra Mastery & Vector Space Intro
+* Day 04: Matrix Algebra Mastery & Vector Space Intro
 ** Block A: Active Computation
 - [ ] Open =ps_05.org= and complete Problem 16 (Gaussian elimination and rank).
 - Rationale: Prof B relies on Gaussian elimination to check invertibility and rank, avoiding determinants entirely.
@@ -59,7 +59,7 @@
 - [ ] Open =exam_01.org= and complete Problem 6(d).
 - Rationale: Integrates complex arithmetic directly into finding a linear map's kernel to determine injectivity.
 
-* Day 5: Vector Spaces - Subspaces & Bases
+* Day 05: Vector Spaces - Subspaces & Bases
 ** Block A: Active Computation
 - [ ] Open =ps_06.org= and complete Problem 21 (Subspace checks).
 - Rationale: Vector space questions strictly require verifying if a given set is a subspace.
@@ -71,7 +71,7 @@
 - [ ] Open =exam_01.org= and complete Problem 6(c).
 - Rationale: Tests subspace checks on polynomials and specific quadratic constraints seen in the Target Exam.
 
-* Day 6: Linear Systems & Vector Spaces (Independence)
+* Day 06: Linear Systems & Vector Spaces (Independence)
 ** Block A: Active Computation
 - [ ] Open =ps_06.org= and complete Problem 22 (Linear independence and spanning sets).
 - Rationale: Drills polynomial and complex vector independence, which are "Prof A Filter" must-knows.
@@ -83,7 +83,7 @@
 - [ ] Open =exam_01.org= and complete Problem 6(b).
 - Rationale: Directly applies basis equivalence theory to determine if a set of complex polynomials contains a linearly independent set.
 
-* Day 7: Synthesis - Maps & Fields
+* Day 07: Synthesis - Maps & Fields
 ** Block A: Active Computation
 - [ ] Open =ps_01.org= and complete Problem 1 (Verifying field definitions).
 - [ ] Open =ps_01.org= and complete Problem 2(a-c) (Verifying field definitions).
@@ -96,7 +96,7 @@
 - [ ] Open =exam_01.org= and complete Problem 2.
 - Rationale: This tests the 4-point raw definition of a field, basic injectivity, and function composition.
 
-* Day 8: Synthesis & Pre-Mock Drilling
+* Day 08: Synthesis & Pre-Mock Drilling
 ** Block A: Active Computation
 - [ ] Open =past_paper_01.org=, go to the 2nd Exam Date, and complete Problem 1 (Linear map solutions).
 - Rationale: Rapid-fire computation of linear map images keeps your Gaussian elimination reflexes sharp.
@@ -109,7 +109,7 @@
 - [ ] Open =past_paper_01.org=, go to the 2nd Exam Date, and complete Problem 3.
 - Rationale: Forces you to write out the Dimension Theorem for sums perfectly in an exam context.
 
-* Day 9: Timed Mock Exam 1
+* Day 09: Timed Mock Exam 1
 ** Block A: Active Computation
 - [ ] Open =ps_05.org= and complete Problem 15 (LU factorization with pivoting).
 - Rationale: A quick mechanical warm-up to activate row reduction muscle memory before the clock starts.
