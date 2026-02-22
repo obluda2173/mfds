@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-16>
-#+lastmod: <2026-02-21 14:33>
+#+lastmod: <2026-02-22 12:43>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -15,7 +15,7 @@
 
 * Day 01: Front-Loading Linear Maps & Matrix Algebra (Basics)
 ** Block A: Active Computation
-- [ ] Open =ps_04.org= and complete Problem 10 (LU Decomposition without pivoting).
+- [X] Open =ps_04.org= and complete Problem 10 (LU Decomposition without pivoting).
 - Rationale: Building flawless Gaussian Elimination and basic LU mechanics is foundational for everything else in Matrix Algebra.
 ** Block B: Theory & Proof Memorization
 - [ ] Open =must_know_proofs.org= and memorize the Steinitz Exchange Theorem (Theorem III.1.47).

@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-21>
-#+lastmod: <2026-02-21 14:33>
+#+lastmod: <2026-02-22 12:42>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -16,13 +16,150 @@
 * Day 01: Front-Loading Linear Maps & Matrix Algebra (Basics)
 ** Block A: Active Computation
 *** Task
+#+begin_quote
+a. In this exercise, we work over the field $\mathbb{R}$. Consider
+   $A=\begin{bmatrix}2&1&-1\\ 4&5&-3\\ -2&5&-2\end{bmatrix}\in\mathbb{R}^{3\times3}$,
+   $b=\begin{bmatrix}1\\ 7\\ 3\end{bmatrix}\in\mathbb{R}^{3}$.
+
+   Perform Gaussian elimination on the system $Ax=b$ without row exchanges. Show explicitly how you eliminate the entries below the diagonal in the first and second columns, and write down the resulting upper-triangular matrix $U$.
+
+b. Let $m_{21}$, $m_{31}$ be the multipliers used to eliminate the entries in the first column, and let $m_{32}$ be the multiplier used to eliminate the $(3, 2)$ -entry after the first elimination step.
+   Form the unit lower-triangular matrix
+
+   $$L=\begin{bmatrix}1&0&0\\ m_{21}&1&0\\ m_{31}&m_{32}&1\end{bmatrix}$$
+
+   Verify that your matrices satisfy $A=LU$.
+
+c. Solve $Ax=b$ using the factorization $A=LU$ by (i) solving $Ly=b$ for $y$ (forward substitution) and then (ii) solving $Ux=y$ for $x$ (backward substitution). Present your intermediate vector $y$ and the final solution $x$.
+
+d. (Programming, Julia) Implement two Julia functions =forward_substitution(L,b)= and =backward_substitution(U,y)= that solve $Ly=b$ band $Ux=y$ for triangular matrices of compatible sizes. Use your code to solve the system from this exercise and verify that your result agrees with Julia's $A \setminus b$.
+#+end_quote
 
 *** Solution
+**** (a)
+
+
+\begin{align*}
+[A \mid b] =
+&\left[\begin{array}{ccc|c}
+2 & 1 & -1 & 1 \\
+4 & 5 & -3 & 7 \\
+-2 & 5 & -2 & 3
+\end{array}\right] \\
+\xrightarrow{m_{21}=2,\; m_{31}=-1}
+&\left[\begin{array}{ccc|c}
+2 & 1 & -1 & 1 \\
+0 & 3 & -1 & 5 \\
+0 & 6 & -3 & 4
+\end{array}\right] \\
+\xrightarrow{m_{32}=2}
+&\left[\begin{array}{ccc|c}
+2 & 1 & -1 & 1 \\
+0 & 3 & -1 & 5 \\
+0 & 0 & -1 & -6
+\end{array}\right]
+= [U \mid \tilde{b}]
+\end{align*}
+
+**** (b)
+
+\begin{align*}
+L &= \begin{bmatrix}
+        1 & 0 & 0 \\
+        m_{21} & 1 & 0 \\
+        m_{31} & m_{32} & 1 \\
+     \end{bmatrix} \\
+  &= \begin{bmatrix}
+        1 & 0 & 0 \\
+        2 & 1 & 0 \\
+        -1 & 2 & 1 \\
+     \end{bmatrix} \\
+\end{align*}
+
+**** (c)
+
+\begin{align*}
+Ux &= y \\
+(-1)x_3 &= -6 &\implies x_3 &= 6 \\
+(3)x_2 + (-1)x_3 &= 5 &\implies x_2 &= \frac{11}{3} \\
+(2)x_1 + (1)x_2 + (-1)x_3 &= 1 &\implies x_1 &= \frac{5}{3} \\
+\end{align*}
+
+**** (d)
+
+#+begin_src julia :results output :exports both :tangle julia/p_10_d.jl
+function forward_substitution(L, b)
+    n = size(L, 1)
+    y = zeros(Float64, n)
+
+    for i in 1:n
+        sum = b[i]
+
+        for j in 1:(i-1)
+            sum -= L[i, j] * y[j]
+        end
+
+        y[i] = sum / L[i, i]
+    end
+    return y
+end
+
+function backward_substitution(U, y)
+    n = size(U, 1)
+    x = zeros(Float64, n)
+
+    for i in n:-1:1
+        sum = y[i]
+
+        for j in (i+1):n
+            sum -= U[i, j] * x[j]
+        end
+        x[i] = sum / U[i, i]
+    end
+    return x
+end
+
+L = [ 1  0  0;
+      2  1  0;
+     -1  2  1]
+
+U = [ 2  1 -1;
+      0  3 -1;
+      0  0 -1]
+
+b = [ 1;
+      7;
+      3]
+
+y = forward_substitution(L, b)
+x = backward_substitution(U, y)
+
+println("Intermediate vector y: ", y)
+println("Final solution x: ", x)
+#+end_src
+
+#+RESULTS:
+#+begin_example
+forward_substitution (generic function with 1 method)
+backward_substitution (generic function with 1 method)
+3×3 Matrix{Int64}:
+  1  0  0
+  2  1  0
+ -1  2  1
+3×3 Matrix{Int64}:
+ 2  1  -1
+ 0  3  -1
+ 0  0  -1
+3-element Vector{Int64}:
+ 1
+ 7
+ 3
+#+end_example
 
 *** Review Metrics
-- Time Spent:
-- Confidence (1-5):
-- Mistakes / Takeaways:
+- Time Spent: 1 hours
+- Confidence (1-5): 4
+- Mistakes / Takeaways: Mainly focused on best structure approach, balancing speed and error prone.
 
 ** Block B: Theory & Proof Memorization
 *** Task
