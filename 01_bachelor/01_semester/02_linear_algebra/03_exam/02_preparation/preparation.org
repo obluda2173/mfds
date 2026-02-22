@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-21>
-#+lastmod: <2026-02-22 12:42>
+#+lastmod: <2026-02-22 19:41>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -154,6 +154,16 @@ backward_substitution (generic function with 1 method)
  1
  7
  3
+3-element Vector{Float64}:
+  1.0
+  5.0
+ -6.0
+3-element Vector{Float64}:
+ 1.6666666666666667
+ 3.6666666666666665
+ 6.0
+Intermediate vector y: [1.0, 5.0, -6.0]
+Final solution x: [1.6666666666666667, 3.6666666666666665, 6.0]
 #+end_example
 
 *** Review Metrics
@@ -163,8 +173,21 @@ backward_substitution (generic function with 1 method)
 
 ** Block B: Theory & Proof Memorization
 *** Task
+Learn and memorize the Steinitz Exchange Theorem (Theorem III.1.47).
 
 *** Solution
+
+Let $V$ be a vector space over a field $\mathbb{F}$. Let $L = \left\{ v_1, v_2, \ldots, v_m \right\}$ be linearly independent and $S = \left\{ w_1, w_2, \ldots, w_{n} \right\}$ be a spanning set over $V$. Then $m \le n$, and there exists $S' \subseteq S$ with $|S'| = n - m$ such that $S' \cup L$ spans $V$.
+
+*Proof.*
+
+*Base Case (m = 0).* $L = \emptyset$. Then, $m = 0 \leq n$, and $L \cup S = S$ spans $V$.
+
+*Inductive Step.* Assume the statement holds for $m - 1$. That is, applying the theorem to $\left\{ v_1, v_2, \ldots, v_{m-1} \right\}$ and $\left\{ w_1, \ldots, w_{n} \right\}$ there exists $S_{m-1} \subseteq S$ with $|S_{m-1}| = n - (m-1)$ such that
+
+$$\left\{ v_1, \ldots, v_{m-1} \right\} \cup S_{m-1}$$
+
+spans $V$. In particular $m-1 \leq n$, so this set is well defined and non empty.
 
 *** Review Metrics
 - Time Spent:
@@ -173,8 +196,43 @@ backward_substitution (generic function with 1 method)
 
 ** Block C: Application/Testing
 *** Task
+#+begin_quote
+a. Define the terms kernel, image, and rank of a linear map. (2 Points)
+
+b. Provide a proper formulation for the Steinitz exchange theorem (Theorem III.1.47). (2 Points)
+
+c. Give a proof of the Steinitz exchange theorem. (6 Points)
+#+end_quote
 
 *** Solution
+**** (a)
+
+Let $T : V \rightarrow W$ be a linear map between vector spaces $V$ and $W$ over a field $\mathbb{F}$.
+
+- *Kernel of $T$:*
+
+  $$ker(T) = \left\{ v \in V : T(v) = 0_{W} \right\}$$
+
+  A kernel is the preimage of a zero vector in $W$. It is a subspace of $V$.
+
+- *Image of $T$:*
+
+  $im(T) = \left\{ T(v) : v \in V \right\} = T(V)$
+
+  The image is the set of all outputs of $T$. It is a subspace of $W$.
+
+- *Rank of $T$:*
+
+  $$rank(T) = dim(im(T))$$
+
+  Rank is the dimension of the image space.
+
+**** (b)
+
+Let $V$ be a vector space of a field $\mathbb{F}$. Let $L = \left\{ v_1, v_2, \ldots, v_m \right\}$ be linearly independent and $S = \left\{ w_1, w_2, \ldots, w_n \right\}$ be a spanning set over $V$. Then, $m \leq n$, and there exists $S' \subseteq S$ with $|S'| = n - m$ such that $L \cup S'$ spans $V$.
+
+
+**** (c)
 
 *** Review Metrics
 - Time Spent:
