@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-21>
-#+lastmod: <2026-02-22 19:41>
+#+lastmod: <2026-02-23 14:05>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -37,7 +37,6 @@ d. (Programming, Julia) Implement two Julia functions =forward_substitution(L,b)
 
 *** Solution
 **** (a)
-
 
 \begin{align*}
 [A \mid b] =
@@ -242,8 +241,194 @@ Let $V$ be a vector space of a field $\mathbb{F}$. Let $L = \left\{ v_1, v_2, \l
 * Day 02: Matrix Algebra - Inverses & Pivoting
 ** Block A: Active Computation
 *** Task
+#+begin_quote
+Let
+$$A=\begin{bmatrix}0&2&1\\ 2&2&3\\ 4&1&8\end{bmatrix}\in\mathbb{R}^{3\times3}, \quad b=\begin{bmatrix}3\\ 7\\ 10\end{bmatrix}\in\mathbb{R}^{3}.$$
+
+(a) Perform the first step of Gaussian elimination with partial pivoting in the first column, i.e., look for an appropriate row $j$ in your working column that contains a non-zero element, and then swap the first and $j$ th row. Write down the permutation matrix $P_{1}$ representing the row swap that is performed (if any), and the resulting matrix $P_{1}A$.
+
+(b) Continue the elimination with partial pivoting until you obtain matrices $P, L, U$ such that
+$$PA=LU$$,
+where $P$ is a permutation matrix, $L$ is unit lower triangular, and $U$ is upper triangular. Write down $P$, $L$, and $U$ explicitly.
+
+(c) Solve $Ax=b$ using the factorization $PA=LU$ by solving $Ly=Pb$, $Ux=y$. Present $y$ and $r$.
+#+end_quote
 
 *** Solution
+**** (a)
+
+\begin{align*}
+P_1A
+&=
+\underbrace{
+\begin{bmatrix}
+0 & 0 & 1 \\
+0 & 1 & 0 \\
+1 & 0 & 0 \\
+\end{bmatrix}
+}_{P_1}
+\underbrace{
+\begin{bmatrix}
+0 & 2 & 1 \\
+2 & 2 & 3 \\
+4 & 1 & 8 \\
+\end{bmatrix}
+}_{A} \\
+&=
+\begin{bmatrix}
+4 & 1 & 8 \\
+2 & 2 & 3 \\
+0 & 2 & 1 \\
+\end{bmatrix} \\
+\end{align*}
+
+**** (b)
+
+        \begin{align*}
+P_1A &=
+\begin{bmatrix}
+4 & 1 & 8 \\
+2 & 2 & 3 \\
+0 & 2 & 1 \\
+\end{bmatrix} \\
+&=
+\begin{bmatrix}
+1 & 0 & 0 \\
+\frac{1}{2} & 1 & 0 \\
+0 & 0 & 1 \\
+\end{bmatrix}
+\begin{bmatrix}
+4 & 1 & 8 \\
+0 & \frac{3}{2} & -1 \\
+0 & 2 & 1 \\
+\end{bmatrix}
+\quad \left( R_2 \leftarrow R_2 - (\frac{1}{2}) R_1 \right) \\
+P_2A &=
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 0 & 1 \\
+0 & 1 & 0 \\
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 \\
+\frac{1}{2} & 1 & 0 \\
+0 & 0 & 1 \\
+\end{bmatrix}
+\begin{bmatrix}
+4 & 1 & 8 \\
+0 & \frac{3}{2} & -1 \\
+0 & 2 & 1 \\
+\end{bmatrix} \\
+&=
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 1 \\
+\frac{1}{2} & 0 & 1 \\
+\end{bmatrix}
+\begin{bmatrix}
+4 & 1 & 8 \\
+0 & 2 & 1 \\
+0 & \frac{3}{2} & -1 \\
+\end{bmatrix} \\
+&=
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+\frac{1}{2} & \frac{3}{4} & 1 \\
+\end{bmatrix}
+\begin{bmatrix}
+4 & 1 & 8 \\
+0 & 2 & 1 \\
+0 & 0 & -\frac{7}{4} \\
+\end{bmatrix}
+\quad \left( R_3 \leftarrow R_3 - (\frac{3}{4}) R_2 \right) \\
+\end{align*}
+
+\begin{align*}
+P &=
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 0 & 1 \\
+0 & 1 & 0 \\
+\end{bmatrix}
+\begin{bmatrix}
+0 & 0 & 1 \\
+0 & 1 & 0 \\
+1 & 0 & 0 \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 & 0 & 1 \\
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+\end{bmatrix} \\
+L &=
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+\frac{1}{2} & \frac{3}{4} & 1 \\
+\end{bmatrix} \\
+U &=
+\begin{bmatrix}
+4 & 1 & 8 \\
+0 & 2 & 1 \\
+0 & 0 & -\frac{7}{4} \\
+\end{bmatrix} \\
+\end{align*}
+
+**** (c)
+
+\begin{align*}
+Ly &= Pb \\
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+\frac{1}{2} & \frac{3}{4} & 1 \\
+\end{bmatrix}
+\begin{bmatrix}
+y_1 \\
+y_2 \\
+y_3 \\
+\end{bmatrix}
+&=
+\begin{bmatrix}
+10 \\
+3 \\
+7 \\
+\end{bmatrix} \\
+\end{align*}
+
+\begin{align*}
+(1) y_1 &= 10 &\implies y_1 &= 10 \\
+(0) y_1 + (1) y_2 &= 3 &\implies y_2 &= 3 \\
+(\frac{1}{2}) y_1 + (\frac{3}{4}) y_2 + (1) y_3 &= 7 &\implies y_3 &= - \frac{1}{4} \\
+\end{align*}
+
+\begin{align*}
+Ux &= y \\
+\begin{bmatrix}
+4 & 1 & 8 \\
+0 & 2 & 1 \\
+0 & 0 & -\frac{7}{4} \\
+\end{bmatrix}
+\begin{bmatrix}
+x_1 \\
+x_2 \\
+x_3 \\
+\end{bmatrix}
+&=
+\begin{bmatrix}
+10 \\
+3 \\
+-\frac{1}{4} \\
+\end{bmatrix}
+\end{align*}
+
+\begin{align*}
+(-\frac{7}{4}) x_3 &= -\frac{1}{4} &\implies x_3 &= \frac{1}{7} \\
+(2) x_2 + (1) x_3 &= 3 &\implies x_2 &= \frac{10}{7} \\
+(4) x_1 + (1) x_2 + (8) x_3 &= 10 &\implies x_1 &= \frac{13}{7} \\
+\end{align*}
 
 *** Review Metrics
 - Time Spent:

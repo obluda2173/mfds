@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-16>
-#+lastmod: <2026-02-22 12:43>
+#+lastmod: <2026-02-23 13:01>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -26,7 +26,7 @@
 
 * Day 02: Matrix Algebra - Inverses & Pivoting
 ** Block A: Active Computation
-- [ ] Open =ps_05.org= and complete Problem 13 (LU with partial pivoting).
+- [X] Open =ps_05.org= and complete Problem 13 (LU with partial pivoting).
 - Rationale: The Target Exam specifically demands LU factorization *with pivoting*, making this non-negotiable.
 ** Block B: Theory & Proof Memorization
 - [ ] Open =must_know_proofs.org= and memorize the Dimension Theorem / Rank-Nullity (Theorem IV.1.10).
