@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-21>
-#+lastmod: <2026-02-23 14:05>
+#+lastmod: <2026-02-23 16:46>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -188,6 +188,48 @@ $$\left\{ v_1, \ldots, v_{m-1} \right\} \cup S_{m-1}$$
 
 spans $V$. In particular $m-1 \leq n$, so this set is well defined and non empty.
 
+*Formal Proof.*
+
+- *Lemma (Exchange Lemma).*
+
+  Let $V$ be a $\mathbb{F}$ - vector space, $A \subseteq V$ a subset, and $v \in \langle A \rangle$ an arbitrary element.
+
+  ~here we just defined that $V$ is our vector space, $A$ is a subset of $V$ (because of notation $\langle A \rangle$), and let $v$ be some vector that lies in the span of $A$~
+
+  Let $a_0 \in A$ be an element such that there is a representation of $v$ as a linear combination of elements of $A$ in which $a_0$ has a coefficient $\lambda_0 \neq 0$.
+
+  ~here we are basically linking $a_0$ to arbitrary element $v$, by saying that $v$ can be represented as a linear combination, where $a_0$ takes place (as $\lambda_0 \neq 0$)~
+
+  Then the set $A' := (A \setminus \left\{ a_0 \right\}) \cup \left\{ v \right\}$, which is obtained by replacing the vector $a_0$ in $A$ by $v$, satisfies $\langle A' \rangle = \langle A \rangle$.
+
+  ~here we are constructing a new set $A'$ which is a set $A$ with replaced $v$ over $a_0$, then saying that $\langle A' \rangle = \langle A \rangle$ (meaning they have a same span, which implies $A'$ being a spanning set over $V$)~
+
+- *Lemma Proof (Exchange Lemma).*
+
+  By assumption we have $v \in \langle A \rangle$, hence $A' \subseteq \langle A \rangle$, hence $\langle A' \rangle \subseteq \langle A \rangle$.
+
+  ~here as I can see we are starting to prove from both sides (e.g. $\langle A' \rangle \subseteq \langle A \rangle$ and $\langle A \rangle \subseteq \langle A' \rangle$ implies $\langle A \rangle = \langle A' \rangle$). since $v$ was assumed to be a vector that lies in the span of $A$, $A'$ must be a subset of span $A$~
+
+  Conversely, by assumption there exists elements $a_1, \ldots, a_n \in A \setminus \left\{ a_0 \right\}$ and scalars $\lambda_0, \ldots, \lambda_n$ with $\lambda_0 \neq 0$ such that $v = \lambda_0 a_0 + \sum_{j=1}^{n} \lambda_j a_j$.
+
+  ~here we are just saying that since by assumption $v$ is a linear combination of span $A$, we can write $v$ in the form of $v = \lambda_0 a_0 + \sum_{j=1}^{n} \lambda_j a_j$~
+
+  Hence, $a_0 = \lambda_0^{-1} \left( v - \sum_{j=1}^n \lambda_j a_j \right) \in \langle A' \rangle$.
+
+  ~here we have just rewrote the previous equiation for $a_0$, since the RHS is fully constructed of $v$ and $a_j$, remembering that $A' := (A \setminus \left\{ a_0 \right\}) \cup \left\{ v \right\}$ we conclude that $a_0 \in \langle A' \rangle$~
+
+  Since obviously $A \setminus \left\{ a_0 \right\} \subseteq \langle A' \rangle$ holds, we obtain $A \subseteq \langle A' \rangle$ and therefore $\langle A \rangle \subseteq \langle A' \rangle$.
+
+  ~here we stated obvious statement, and by the work done before (that $a_0 \in \langle A' \rangle$) stated $\langle A \rangle \subseteq \langle A' \rangle$, hence the two sided proof finishes~
+
+- *Theorem (Steinitz Exchange Theorem).*
+
+  Let $V$ be a finitely generated $\mathbb{F}$ vector space, and let $\left\{ v_1, \ldots, v_n \right\}$ be a spanning set of $V$. Then:
+
+  a. If $A \subseteq V$ is a linearly independent subset, then $A$ is finite and has at most $n$ elements. If $A = \left\{ a_1, \ldots, a_k \right\}$ with $k < n$, then one can renumber the elements $v_i$, in such a way $\left\{ a_1, \ldots, a_k, v_{k+1}, \ldots v_n \right\}$ is a spanning set of $V$.
+
+  b. If $A \subseteq V$ is an arbitrary spanning set, then there exists a finite subset $A' \subseteq A$ with at most $n$ elements that is also a spanning set of $V$.
+
 *** Review Metrics
 - Time Spent:
 - Confidence (1-5):
@@ -229,7 +271,6 @@ Let $T : V \rightarrow W$ be a linear map between vector spaces $V$ and $W$ over
 **** (b)
 
 Let $V$ be a vector space of a field $\mathbb{F}$. Let $L = \left\{ v_1, v_2, \ldots, v_m \right\}$ be linearly independent and $S = \left\{ w_1, w_2, \ldots, w_n \right\}$ be a spanning set over $V$. Then, $m \leq n$, and there exists $S' \subseteq S$ with $|S'| = n - m$ such that $L \cup S'$ spans $V$.
-
 
 **** (c)
 
