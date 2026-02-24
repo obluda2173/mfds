@@ -1,0 +1,60 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "MFDS Interactive Lecture Notes"
+  description: "Interactive lecture notes for Mathematical Foundations of Data Science"
+  site-url: https://obluda2173.github.io/mfds_interactive_notes_demo/
+  
+  navbar:
+    title: "MFDS Notes"
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Analysis"
+        menu:
+          - text: "Newton's Method"
+            href: lectures/analysis/01_newton_method.qmd
+      - text: "Linear Algebra"
+        href: lectures/linear_algebra/index.qmd
+      - text: "Programming"
+        href: lectures/programming/index.qmd
+    right:
+      - icon: github
+        href: https://github.com/obluda2173/mfds_interactive_notes_demo
+
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - section: "Analysis I"
+        contents:
+          - lectures/analysis/01_newton_method.qmd
+      - section: "Linear Algebra"
+        contents:
+          - lectures/linear_algebra/index.qmd
+      - section: "Programming"
+        contents:
+          - lectures/programming/index.qmd
+
+  page-footer:
+    center: |
+      MFDS Interactive Notes · University of Vienna · 2025-2028
+    right: |
+      Built with [Quarto](https://quarto.org/)
+
+format:
+  html:
+    theme: 
+      light: flatly
+      dark: darkly
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    code-fold: false
+    code-tools: true
+    highlight-style: github
+
+execute:
+  freeze: auto

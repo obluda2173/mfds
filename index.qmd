@@ -1,52 +1,66 @@
 ---
 title: "MFDS Interactive Lecture Notes"
-subtitle: "Mathematical Foundations of Data Science — University of Vienna"
-format: live-html
+subtitle: "Mathematical Foundations of Data Science"
+author: "Erik An"
+date: last-modified
 ---
 
 ## Welcome
 
-These interactive lecture notes allow you to **run code directly in your browser**—no installation required.
+Welcome to the interactive lecture notes for the **Mathematical Foundations of Data Science (MFDS)** program at the University of Vienna.
 
-The code executes via [Pyodide](https://pyodide.org/), a Python interpreter compiled to WebAssembly.
+These notes allow you to:
 
-::: {.callout-note}
-## First Load
-The first code execution downloads the Python engine (~10MB). Subsequent runs are instant.
-:::
+- 📖 **Read** mathematical content with proper LaTeX rendering
+- 💻 **Interact** with code examples
+- 🧪 **Experiment** by modifying and running code
+- ✅ **Self-check** your understanding
 
 ---
 
 ## Available Lectures
 
-### Analysis I
+### 📐 Analysis I
 
-| Lecture | Topic | 
-|:--------|:------|
-| [Lecture 1](lectures/analysis/01_newton_method.qmd) | Newton's Method |
+Foundations of real analysis: sequences, limits, continuity, and differentiation.
+
+| Lecture | Topic | Status |
+|:--------|:------|:------:|
+| [Lecture 1](lectures/analysis/01_newton_method.qmd) | Newton's Method | ✅ |
+| Lecture 2 | Sequences and Limits | 🚧 |
+| Lecture 3 | Continuity | 🚧 |
+
+### 📊 Linear Algebra
+
+Vector spaces, matrices, eigenvalues, and linear transformations.
+
+| Lecture | Topic | Status |
+|:--------|:------|:------:|
+| Lecture 1 | Vector Spaces | 🚧 |
+| Lecture 2 | Linear Maps | 🚧 |
+
+### 💻 Programming
+
+Computational methods and programming for data science.
+
+| Lecture | Topic | Status |
+|:--------|:------|:------:|
+| Lecture 1 | Julia Basics | 🚧 |
 
 ---
+ 
+## Legend
 
-## Quick Demo
-
-Try editing and running this code:
-
-```{pyodide}
-import numpy as np
-
-# Calculate the square root of 2 using Newton's method
-x = 2.0  # Starting guess
-for i in range(5):
-    x = x - (x**2 - 2) / (2*x)
-    print(f"Iteration {i+1}: x = {x:.15f}")
-
-print(f"\nTrue value:   {np.sqrt(2):.15f}")
-```
+| Symbol | Meaning |
+|:------:|:--------|
+| ✅ | Complete |
+| 🚧 | In Progress |
 
 ---
 
 ## About
 
+This project is inspired by MIT's [Introduction to Computational Thinking](https://computationalthinking.mit.edu/) course.
+
 **Author:** Erik An  
-**Program:** MFDS Bachelor, University of Vienna (2025-2028)  
-**Repository:** [GitHub](https://github.com/obluda2173/mfds_interactive_notes_demo)
+**Program:** MFDS Bachelor, University of Vienna (2025-2028)

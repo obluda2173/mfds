@@ -1,0 +1,15 @@
+---
+title: "Programming"
+subtitle: "Coming Soon"
+---
+
+## Programming Lectures
+
+This section will contain interactive lectures on:
+
+- Julia Basics
+- Numerical Methods
+- Data Structures
+- Plotting and Visualization
+
+🚧 **Under Construction** 🚧

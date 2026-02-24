@@ -1,0 +1,15 @@
+---
+title: "Linear Algebra"
+subtitle: "Coming Soon"
+---
+
+## Linear Algebra Lectures
+
+This section will contain interactive lectures on:
+
+- Vector Spaces
+- Linear Maps
+- Matrices and Determinants
+- Eigenvalues and Eigenvectors
+
+🚧 **Under Construction** 🚧
