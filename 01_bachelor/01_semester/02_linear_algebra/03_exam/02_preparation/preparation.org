@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-21>
-#+lastmod: <2026-02-24 12:13>
+#+lastmod: <2026-02-24 15:37>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -178,15 +178,17 @@ Learn and memorize the Steinitz Exchange Theorem (Theorem III.1.47).
 
 Let $V$ be a vector space over a field $\mathbb{F}$. Let $L = \left\{ v_1, v_2, \ldots, v_m \right\}$ be linearly independent and $S = \left\{ w_1, w_2, \ldots, w_{n} \right\}$ be a spanning set over $V$. Then $m \le n$, and there exists $S' \subseteq S$ with $|S'| = n - m$ such that $S' \cup L$ spans $V$.
 
-*Proof.*
+- *Custom Exam Style Proof.*
 
-*Base Case (m = 0).* $L = \emptyset$. Then, $m = 0 \leq n$, and $L \cup S = S$ spans $V$.
+  - *Theorem.*
 
-*Inductive Step.* Assume the statement holds for $m - 1$. That is, applying the theorem to $\left\{ v_1, v_2, \ldots, v_{m-1} \right\}$ and $\left\{ w_1, \ldots, w_{n} \right\}$ there exists $S_{m-1} \subseteq S$ with $|S_{m-1}| = n - (m-1)$ such that
+    Let $L = \left\{ v_1, \ldots, v_m \right\}$ be linearly independent and $S = \left\{ w_1, \ldots, w_n \right\}$ span $V$. Then $m \leq n$, and $\exists S' \subseteq S$ with $|S'| = n - m$ such that $L \cup S'$ spans $V$.
 
-$$\left\{ v_1, \ldots, v_{m-1} \right\} \cup S_{m-1}$$
+  - *Proof.*
 
-spans $V$. In particular $m-1 \leq n$, so this set is well defined and non empty.
+    $m = 0$: Trivial, $L \cup S = S$ spans $V$ and $0 \leq n$.
+
+    Assume case holds for $m-1$. Applied to $\left\{ v_1, \ldots, v_{m-1} \right\}$ and $S$, we have obtain $S_{m-1} \subseteq S$ with $|S_{m-1}| = n - (m - 1)$ such that $\left\{ v_1, \ldots, v_{m-1} \right\} \cup S_{m-1}$ spans $V$.
 
 *Formal Proof.*
 
@@ -493,6 +495,51 @@ $$dim(V) = dim(im(f)) + dim(ker(f))$$
 
 *Proof.*
 
+We choose a basis $\left\{ b_1, \ldots, b_k \right\}$ for the subspace $ker(f) \subseteq V$.
+
+~ok, setting up basis for kernel~
+
+Since the vectors $b_i$ are linearly independent, /Corollary III.1.48(ii)/ shows they can be extended to a basis $\left\{ b_1, \ldots, b_n \right\}$ of the vector space $V$.
+
+~ok, so we now state (common sense) that the basis of kernel can be extended to span the whole vector space (keeping in mind all vectors are linearly independent)~
+
+We claim that the vectors $f(b_{k+1}), \ldots, f(b_{n}) \in W$ form a basis of the subspace $im(f) \in W$, which of course proves the theorem.
+
+~here we say that those extended basis vectors after the linear mapping all together form a basis for a subspace $im(f) \subseteq W$, which is logical~
+
+First, /Proposition III.2.11/ tells us that vectors $f(b_1), \ldots, f(b_n)$ form a generating system of $im(f)$.
+
+~so a basis of vector space after linear mapping spans the image, got it~
+
+By construction, however, we have $f(b_1) = \ldots = f(b_k) = 0$, so $f(b_{k+1}), \ldots, f(b_n)$ also form a generating system.
+
+~mentioning that after linear mapping, some of vectors (that form kernel) result it a 0, so only $b_{k+1}, ...$ are actually spanning the image~
+
+On the other hand, assume that $\lambda_{k+1}, \ldots, \lambda_n \in \mathbb{F}$ are scalars such that $\lambda_{k+1}f(b_{k+1}) + \ldots + \lambda_{n}f(b_n) = 0$ holds.
+
+~just assuming there are scalars that scale the "contributing" vectors $f(b_i)$ that sum tehm all up to 0~
+
+Then we can write the left hand side as $f(\lambda_{k+1}b_{k+1} + \ldots + \lambda_n b_n)$, hence, $\lambda_{k+1}b_{k+1} + \ldots + \lambda_n b_n \in ker(f)$.
+
+~now we perform an operation to put all those scalars and vectors indside of linear map, which of course results in a 0, which implies that this vector sum is an element of a kernel~
+
+By construction, the vectors $b_1, \ldots, b_k$ form a basis of this subspace, so we find scalars $\mu_1, \ldots, \mu_k \in \mathbb{F}$ such that
+
+$$\lambda_{k+1}b_{k+1} + \ldots + \lambda_nb_n = \mu_1b_1 + \ldots + \mu_kb_k$$
+
+~since the vectors $b_1, \ldots, b_k$ are a basis of a kernel, there exists scalars that can result in linear combination equal to previously found one (made of $b_{k+1}, \ldots$ and scalars)~
+
+But this means precisely that
+
+$$\mu_1b_1 + \ldots + \mu_kb_k - \lambda_{k+1}b_{k+1} - \ldots - \lambda_nb_n = 0$$
+
+~just rewriting previous formula~
+
+and by linear independence of $b_1, \ldots, b_n$ this is possible only if
+
+$$\mu_1 = \ldots = \mu_k = \lambda_{k+1} = \ldots = \lambda_n = 0$$
+
+~and now stating that it is only possible if all of the scalars are equal to zero, meaning that vectors $f(b_{k+1}), \ldots, f(b_{n})$ are linearly independent, as their sum can be equal to 0 only if their scalars are equal to 0~
 
 *** Review Metrics
 - Time Spent:
