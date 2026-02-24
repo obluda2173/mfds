@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-16>
-#+lastmod: <2026-02-23 13:01>
+#+lastmod: <2026-02-24 12:14>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -32,8 +32,8 @@
 - [ ] Open =must_know_proofs.org= and memorize the Dimension Theorem / Rank-Nullity (Theorem IV.1.10).
 - Rationale: This is highly frequent in historical data and serves as the most likely verbatim backup if Steinitz is omitted.
 ** Block C: Application/Testing
-- [ ] Open =exam_01.org= and complete Problem 3.
-- [ ] Open =exam_01.org= and complete Problem 4.
+- [X] Open =exam_01.org= and complete Problem 3.
+- [X] Open =exam_01.org= and complete Problem 4.
 - Rationale: Directly tests LU factorization and matrix inversion via elementary row operations in the exact Target Exam format.
 
 * Day 03: Linear Maps & Systems Integration
