@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-01-26>
-#+lastmod: <2026-01-29 21:24>
+#+lastmod: <2026-02-25 17:09>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -58,21 +58,21 @@
 - **Lemma:** 2.3.3.
 
 ** Section 3.1 (Differentiation Definitions)
-- **Problem 1:** 1 question with quotient difference definition. Strategy: "Check diff. with definition".
-- **Problem 5 [Critical]:** "If you don't know exp'(x) = exp(x) I don't care, you will fail".
-- **Problem 6:** "Need to know".
-- **Problem 8 [Crucial]:** Special case of Taylor expansion.
-- **Problem 10:** Important.
+- **3.1.1:** 1 question with quotient difference definition. Strategy: "Check diff. with definition".
+- **3.1.5 [Critical]:** "If you don't know exp'(x) = exp(x) I don't care, you will fail".
+- **3.1.6:** "Need to know".
+- **3.1.8 [Crucial]:** Special case of Taylor expansion.
+- **3.1.10:** Important.
 
 ** Section 3.2 (Derivatives & Rules)
-- **Problem 2, 3:** "Need to know".
-- **Problem 10:** Important theorem.
-- **Problem 11, 13, 14:** Know the derivatives, especially log.
-- **Problem 15:** Promised there will be something similar. Strategy: Where we need to use exp(log).
+- **3.2.2, 3.2.3:** "Need to know".
+- **3.2.10:** Important theorem.
+- **3.2.11, 3.2.13, 3.2.14:** Know the derivatives, especially log.
+- **3.2.15:** Promised there will be something similar. Strategy: Where we need to use exp(log).
 - **General Note:** Don't really need quotient rule.
 
 ** Section 3.3 (Mean Value Theorem & Convexity)
-- **Problem 10:** "A big deal". Topic: MVT of differentiation.
+- **3.3.10:** "A big deal". Topic: MVT of differentiation.
 - **Convex Function:** Could be relevant ("Hopefully not :(").
 
 ** Integration Focus
