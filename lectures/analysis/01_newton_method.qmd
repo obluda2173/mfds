@@ -3,11 +3,12 @@ title: "Newton's Method"
 subtitle: "Analysis I — Lecture 1"
 author: "Erik An"
 date: last-modified
-format:
-  html:
-    code-fold: false
-    toc: true
+format: live-html
+engine: knitr
+toc: true
 ---
+
+{{< include ../../_extensions/r-wasm/live/_knitr.qmd >}}
 
 ## 1. The Problem
 
@@ -41,22 +42,34 @@ This is **Newton's Method**!
 
 ---
 
-## 3. Python Implementation
+## 3. Interactive Python Code
 
-Let's implement Newton's method in Python:
+The code blocks below are **fully interactive**. You can:
 
-```{python}
+- ✏️ **Edit** the code
+- ▶️ **Run** it with the "Run Code" button
+- 🔄 **Reset** to the original with "Start Over"
+
+### Define the function
+
+```{pyodide}
 import numpy as np
-import matplotlib.pyplot as plt
 
 # Define the function and its derivative
 def f(x):
     return x**2 - 2
 
 def f_prime(x):
-    return 2*x
+    return 2 * x
 
-# Newton's method
+# Test it
+print(f"f(2) = {f(2)}")
+print(f"f'(2) = {f_prime(2)}")
+```
+
+### Newton's Method Implementation
+
+```{pyodide}
 def newton_method(x0, n_iterations):
     """
     Apply Newton's method starting from x0.
@@ -65,90 +78,92 @@ def newton_method(x0, n_iterations):
     history = [x0]
     x = x0
     
-    for _ in range(n_iterations):
-        if abs(f_prime(x)) < 1e-10:  # Avoid division by zero
+    for i in range(n_iterations):
+        if abs(f_prime(x)) < 1e-10:
+            print(f"Warning: derivative near zero at iteration {i}")
             break
         x = x - f(x) / f_prime(x)
         history.append(x)
     
     return history
+
+# Try it! Change x0 or n_iterations and re-run
+x0 = 2.0
+n_iterations = 6
+
+history = newton_method(x0, n_iterations)
+print(f"Starting from x₀ = {x0}")
+print(f"Iterations: {history}")
+print(f"Final approximation: {history[-1]}")
+print(f"True √2 = {np.sqrt(2)}")
 ```
 
 ---
 
-## 4. Example: Finding √2
+## 4. Experiment: Convergence Analysis
 
-Let's start from $x_0 = 2$ and run 6 iterations:
+Try changing the starting point `x0` below and observe how the convergence changes:
 
-```{python}
-# Run Newton's method
-x0 = 2.0
-iterations = 6
-history = newton_method(x0, iterations)
+```{pyodide}
+# === EXPERIMENT: Change x0 and re-run! ===
+x0 = 2.0  # Try: 1.5, 3.0, 0.5, -2.0
 
-# Display results
-print("Newton's Method: Finding √2")
-print("=" * 50)
-print(f"{'n':<4} {'x_n':<20} {'Error |x_n - √2|':<20}")
-print("-" * 50)
-
+history = newton_method(x0, 8)
 sqrt2 = np.sqrt(2)
+
+print(f"{'n':<4} {'x_n':<22} {'Error':<15}")
+print("-" * 45)
+
 for i, x in enumerate(history):
     error = abs(x - sqrt2)
-    print(f"{i:<4} {x:<20.15f} {error:<20.2e}")
-
-print("-" * 50)
-print(f"True √2 = {sqrt2:.15f}")
+    if error < 1e-15:
+        error_str = "< 1e-15"
+    else:
+        error_str = f"{error:.2e}"
+    print(f"{i:<4} {x:<22.15f} {error_str:<15}")
 ```
-
-Notice the **quadratic convergence**: the number of correct digits roughly doubles each iteration!
 
 ---
 
 ## 5. Visualization
 
-```{python}
-#| fig-cap: "Newton's method converging to √2"
-#| fig-width: 8
-#| fig-height: 5
+```{pyodide}
+import matplotlib.pyplot as plt
 
-# Create figure
+# Run Newton's method
+x0 = 2.0
+history = newton_method(x0, 5)
+
+# Create plot
 fig, ax = plt.subplots(figsize=(10, 6))
 
-# Plot the function
+# Plot function
 x_range = np.linspace(-0.5, 3, 200)
 ax.plot(x_range, f(x_range), 'b-', linewidth=2, label=r'$f(x) = x^2 - 2$')
 
-# Plot tangent lines and iterations
-colors = plt.cm.Oranges(np.linspace(0.3, 0.9, len(history)))
-
+# Plot tangent lines
 for i in range(len(history) - 1):
     xi = history[i]
     yi = f(xi)
     slope = f_prime(xi)
     
     # Tangent line
-    x_tangent = np.linspace(xi - 1, xi + 1, 50)
-    y_tangent = yi + slope * (x_tangent - xi)
-    ax.plot(x_tangent, y_tangent, color=colors[i], alpha=0.6, linewidth=1)
-    
-    # Vertical line to next point
-    x_next = history[i + 1]
-    ax.plot([x_next, x_next], [0, f(x_next)], 'g--', alpha=0.4, linewidth=1)
+    x_tan = np.linspace(xi - 1, xi + 1, 50)
+    y_tan = yi + slope * (x_tan - xi)
+    ax.plot(x_tan, y_tan, 'orange', alpha=0.6, linewidth=1)
 
 # Plot iteration points
-ax.scatter(history, [f(x) for x in history], c='red', s=80, zorder=5, 
-           label='Iterations', edgecolors='darkred', linewidths=1.5)
+ax.scatter(history, [f(x) for x in history], c='red', s=80, 
+           zorder=5, label='Iterations', edgecolors='darkred')
 
-# Mark √2
+# Reference lines
 ax.axvline(x=np.sqrt(2), color='green', linestyle=':', linewidth=2, label=r'$\sqrt{2}$')
 ax.axhline(y=0, color='black', linewidth=0.5)
 
-# Labels and legend
-ax.set_xlabel('x', fontsize=12)
-ax.set_ylabel('y', fontsize=12)
-ax.set_title("Newton's Method: Finding √2", fontsize=14)
-ax.legend(loc='upper left')
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+ax.set_title("Newton's Method: Finding √2")
+ax.legend()
 ax.grid(True, alpha=0.3)
 ax.set_xlim(-0.5, 3)
 ax.set_ylim(-3, 5)
@@ -159,49 +174,44 @@ plt.show()
 
 ---
 
-## 6. Quadratic Convergence
+## 6. What Happens at x₀ = 0?
 
-Notice how the error *squares* each iteration (once close to the root):
-
-$$|x_{n+1} - x^*| \approx C |x_n - x^*|^2$$
-
-This means:
-
-- 1 correct digit → 2 correct digits
-- 2 correct digits → 4 correct digits  
-- 4 correct digits → 8 correct digits
-
-**Doubling precision with each step!** This is called **quadratic convergence**.
+```{pyodide}
+# What happens if we start at x0 = 0?
+print(f"f(0) = {f(0)}")
+print(f"f'(0) = {f_prime(0)}")
+print()
+print("The derivative is 0, so we would divide by zero!")
+print("Newton's method fails at this starting point.")
+```
 
 ---
 
-## 7. When Does Newton's Method Fail?
+## 7. Exercise: Find the Cube Root of 2
 
-### Failure Modes
+**Your task:** Modify the code below to find $\sqrt[3]{2}$ instead of $\sqrt{2}$.
 
-1. **Division by zero**: If $f'(x_n) = 0$, the method breaks
+Hint: You need to solve $g(x) = x^3 - 2 = 0$
 
-2. **Cycling**: Some functions cause oscillation
+```{pyodide}
+# TODO: Modify these functions to find the cube root of 2
+def g(x):
+    return x**2 - 2  # Change this!
 
-3. **Divergence**: Bad starting points can send iterates to infinity
+def g_prime(x):
+    return 2 * x     # Change this!
 
-4. **Wrong root**: May converge to a different root than intended
+# Newton's method for g
+def newton_g(x0, n_iter):
+    x = x0
+    for _ in range(n_iter):
+        x = x - g(x) / g_prime(x)
+    return x
 
-### Try it yourself
-
-What happens if we start at $x_0 = 0$?
-
-```{python}
-# Starting at x0 = 0
-try:
-    result = newton_method(0.0, 5)
-    print("History:", result)
-except Exception as e:
-    print(f"Error: {e}")
-
-# The derivative f'(0) = 0, so we'd divide by zero!
-print(f"\nf'(0) = {f_prime(0)}")
-print("Division by zero would occur!")
+# Test your solution
+result = newton_g(1.5, 10)
+print(f"Your result: {result}")
+print(f"True ∛2 = {2**(1/3)}")
 ```
 
 ---
@@ -219,34 +229,3 @@ $$x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$$
 - Requires **derivative** $f'(x)$
 - Sensitive to **starting point**
 - May fail if $f'(x_n) \approx 0$
-
-### Applications
-
-- Solving nonlinear equations
-- Finding eigenvalues
-- Optimization (via $f'(x) = 0$)
-- Computer graphics (ray tracing)
-
----
-
-## Exercises
-
-::: {.callout-tip}
-## Exercise 1
-Apply one step of Newton's method to $f(x) = x^2 - 2$ starting from $x_0 = 1$.
-
-Calculate: $x_1 = x_0 - \frac{f(x_0)}{f'(x_0)}$
-:::
-
-::: {.callout-tip collapse="true"}
-## Solution
-
-$$x_1 = 1 - \frac{1^2 - 2}{2 \cdot 1} = 1 - \frac{-1}{2} = 1.5$$
-:::
-
-::: {.callout-tip}
-## Exercise 2
-Use Newton's method to find $\sqrt[3]{2}$ (the cube root of 2).
-
-Hint: Solve $f(x) = x^3 - 2 = 0$
-:::

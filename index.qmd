@@ -48,15 +48,6 @@ Computational methods and programming for data science.
 | Lecture 1 | Julia Basics | 🚧 |
 
 ---
- 
-## Legend
-
-| Symbol | Meaning |
-|:------:|:--------|
-| ✅ | Complete |
-| 🚧 | In Progress |
-
----
 
 ## About
 
