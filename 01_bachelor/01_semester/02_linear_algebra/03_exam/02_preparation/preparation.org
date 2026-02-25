@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-21>
-#+lastmod: <2026-02-24 15:37>
+#+lastmod: <2026-02-25 18:38>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -541,9 +541,35 @@ $$\mu_1 = \ldots = \mu_k = \lambda_{k+1} = \ldots = \lambda_n = 0$$
 
 ~and now stating that it is only possible if all of the scalars are equal to zero, meaning that vectors $f(b_{k+1}), \ldots, f(b_{n})$ are linearly independent, as their sum can be equal to 0 only if their scalars are equal to 0~
 
+**** Personal Review
+
+Let $V$ and $W$ be a finite dimensional $F$ vector spaces.
+
+Let $f : V \rightarrow W$ be linear map.
+
+Let $\left\{ b_1, \ldots, b_k \right\}$ be a basis of $ker(f) \subseteq V$.
+
+Proving kernel basis can be extended to $n$ values (keep in mind $b_i$ are all linearly independent), with $\left\{ f(b_{k+1}), \ldots, f(b_n) \right\}$ being a basis of $im(f) \subseteq W$.
+
+Claim $\left\{ f(b_1), \ldots, f(b_n) \right\}$ form a basis of $im(f)$.
+
+Note $f(b_1) = \ldots = f(b_k) = 0$ (as they are kernel), while only $\left\{ b_{k+1}, \ldots, b_n \right\}$ are "contributing" to the span of $im(f)$.
+
+Assume $\exists \, \lambda_{k+1}, \ldots, \lambda_n \in \mathbb{F}$ (scalars) such that $\lambda_{k+1}f(b_{k+1}) + \ldots + \lambda_nf(b_n) = 0$.
+
+Hence, (rewriting) $f(\lambda_{k+1}b_{k+1} + \ldots + \lambda_nb_n) = 0$.
+
+Thus, $\lambda_{k+1}b_{k+1} + \ldots + \lambda_nb_n \in ker(f)$ (as their sum is zero).
+
+Since $\left\{ b_1, \ldots, b_k \right\}$ are basis, there must exist scalars $\mu_1, \ldots, \mu_k \in \mathbb{F}$ such that $\lambda_{k+1}b_{k+1} + \ldots + \lambda_nb_n = \mu_1b_1 + \ldots + \mu_kb_k$
+
+Hence, $\mu_1b_1 + \ldots + \mu_kb_k - \lambda_{k+1}b_{k+1} - \ldots - \lambda_nb_n = 0$.
+
+And by linear independence of $b_1, \ldots, b_n$, this is possible iff $\mu_1 = \ldots = \mu_k = \lambda_{k+1} = \ldots = \lambda_n = 0$.
+
 *** Review Metrics
-- Time Spent:
-- Confidence (1-5):
+- Time Spent: Few hours, learned from zero.
+- Confidence (1-5): growing (since repeating).
 - Mistakes / Takeaways:
 
 ** Block C: Application/Testing
@@ -652,6 +678,21 @@ L =
 * Day 03: Linear Maps & Systems Integration
 ** Block A: Active Computation
 *** Task
+#+begin_quote
+19. (18) Linear systems of equations, Reduced row echelon form
+
+(a) (12) Solve the following linear system of equations using Gaussian elimination, i.e., an LU-decomposition (possibly with partial pivoting)
+
+$(2+i)  z_1 + (-1+3i) z_2 + (4-i)  z_3 + (1+2i) z_4 = 5+24i$,
+$(3-2i) z_1 + (2+i)   z_2 + (-1+i) z_3 + 5      z_4  = 24 - 7i$,
+$(-2+i) z_1 + (1-4i)  z_2 + (3+2i) z_3 + (-1+i) z_4 = -14 - 2i$,
+$(1+3i) z_1 - 2       z_2 + (2-i)  z_3 + (4+i)  z_4 = 7 + 10i$.
+
+
+(b) (6) Transform the following real $4\times5$ matrix into reduced row echelon form:
+
+$$A=\begin{pmatrix}12&6&4&-7&-3\\ -6&-3&12&7&1\\ 6&3&-8&-6&4\\ 18&9&4&-11&2\end{pmatrix}$$
+#+end_quote
 
 *** Solution
 

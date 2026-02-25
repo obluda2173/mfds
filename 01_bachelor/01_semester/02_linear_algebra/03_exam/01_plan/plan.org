@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-16>
-#+lastmod: <2026-02-24 12:14>
+#+lastmod: <2026-02-25 18:38>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -21,7 +21,7 @@
 - [ ] Open =must_know_proofs.org= and memorize the Steinitz Exchange Theorem (Theorem III.1.47).
 - Rationale: Prof B's Target Exam awards a massive 10 points for simply stating and proving this exact theorem.
 ** Block C: Application/Testing
-- [ ] Open =exam_01.org= and complete Problem 5.
+- [X] Open =exam_01.org= and complete Problem 5.
 - Rationale: Tests the definitions of Kernel, Image, and Rank alongside the Steinitz proof exactly as Prof B formats them.
 
 * Day 02: Matrix Algebra - Inverses & Pivoting
@@ -29,7 +29,7 @@
 - [X] Open =ps_05.org= and complete Problem 13 (LU with partial pivoting).
 - Rationale: The Target Exam specifically demands LU factorization *with pivoting*, making this non-negotiable.
 ** Block B: Theory & Proof Memorization
-- [ ] Open =must_know_proofs.org= and memorize the Dimension Theorem / Rank-Nullity (Theorem IV.1.10).
+- [X] Open =must_know_proofs.org= and memorize the Dimension Theorem / Rank-Nullity (Theorem IV.1.10).
 - Rationale: This is highly frequent in historical data and serves as the most likely verbatim backup if Steinitz is omitted.
 ** Block C: Application/Testing
 - [X] Open =exam_01.org= and complete Problem 3.
