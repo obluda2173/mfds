@@ -1,6 +1,6 @@
 # MFDS Interactive Lecture Notes
 
-[![Build and Deploy](https://github.com/obluda2173/mfds/actions/workflows/ExportPluto.yaml/badge.svg)](https://github.com/obluda2173/mfds/actions/workflows/ExportPluto.yaml)
+[![Build and Deploy](https://github.com/obluda2173/mfds/actions/workflows/publish.yml/badge.svg)](https://github.com/obluda2173/mfds/actions/workflows/publish.yml)
 
 **Interactive lecture notes for the Mathematical Foundations of Data Science (MFDS) program at the University of Vienna.**
 
