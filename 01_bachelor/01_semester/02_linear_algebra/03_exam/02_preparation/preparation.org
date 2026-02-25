@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-21>
-#+lastmod: <2026-02-25 18:38>
+#+lastmod: <2026-02-25 20:38>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -696,6 +696,65 @@ $$A=\begin{pmatrix}12&6&4&-7&-3\\ -6&-3&12&7&1\\ 6&3&-8&-6&4\\ 18&9&4&-11&2\end{
 
 *** Solution
 
+**** (a)
+
+\begin{align*}
+\left[ \begin{array}{cccc|c}
+(2+i)  & (-1+3i) & (4-i)  & (1+2i) & (5+24i)    \\
+(3-2i) & (2+i)   & (-1+i) & (5)    & (24 - 7i)  \\
+(-2+i) & (1-4i)  & (3+2i) & (-1+i) & (-14 - 2i) \\
+(1+3i) & (-2)    & (2-i)  & (4+i)  & (7 + 10i)  \\
+\end{array} \right]
+\end{align*}
+
+\begin{align*}
+|a_{11}| &= |2 + i| = \sqrt{5} \\
+|a_{21}| &= |3 - 2i| = \sqrt{13} \\
+|a_{31}| &= |-2 + i| = \sqrt{5} \\
+|a_{41}| &= |1 + 3i| = \sqrt{10} \\
+\end{align*}
+
+\begin{align*}
+P_1A &=
+\begin{bmatrix}
+0 & 1 & 0 & 0 \\
+1 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1 \\
+\end{bmatrix}
+\begin{bmatrix}
+(2+i)  & (-1+3i) & (4-i)  & (1+2i) \\
+(3-2i) & (2+i)   & (-1+i) & (5)    \\
+(-2+i) & (1-4i)  & (3+2i) & (-1+i) \\
+(1+3i) & (-2)    & (2-i)  & (4+i)  \\
+\end{bmatrix} \\
+&=
+\begin{bmatrix}
+(3-2i) & (2+i)   & (-1+i) & (5)    \\
+(2+i)  & (-1+3i) & (4-i)  & (1+2i) \\
+(-2+i) & (1-4i)  & (3+2i) & (-1+i) \\
+(1+3i) & (-2)    & (2-i)  & (4+i)  \\
+\end{bmatrix} \\
+\end{align*}
+
+\begin{align*}
+P_1A &=
+\begin{bmatrix}
+1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1 \\
+\end{bmatrix}
+\begin{bmatrix}
+(3-2i) & (2+i)   & (-1+i) & (5)    \\
+(2+i)  & (-1+3i) & (4-i)  & (1+2i) \\
+(-2+i) & (1-4i)  & (3+2i) & (-1+i) \\
+(1+3i) & (-2)    & (2-i)  & (4+i)  \\
+\end{bmatrix} \\
+\end{align*}
+
+$$l_{21} = \dfrac{2+i}{3-2i} = \dfrac{(2+i)(3-2i)}{13}$$
+
 *** Review Metrics
 - Time Spent:
 - Confidence (1-5):
@@ -703,8 +762,23 @@ $$A=\begin{pmatrix}12&6&4&-7&-3\\ -6&-3&12&7&1\\ 6&3&-8&-6&4\\ 18&9&4&-11&2\end{
 
 ** Block B: Theory & Proof Memorization
 *** Task
+#+begin_quote
+Learn and memorize Kernel and Image properties (Proposition III.2.11).
+#+end_quote
 
 *** Solution
+
+**** Annotated Rewriting
+
+Let $V$ and $W$ be vector spaces over $\mathbb{F}$ and let $f : V \rightarrow W$ be linear. Then,
+
+a. If $\hat{V} \subseteq V$ is a subspace, then $f(\hat{V}) \subseteq W$ is also a subspace. In particular $im(f) \subseteq W$ is a subspace.
+b. If $\hat{W} \subseteq W$ is a subspace, then $f^{-1}(\hat{W}) \subseteq V$ is also a subspace. In particular, $ker(f) \subseteq V$ is a subspace.
+c. $f$ is surjective if and only if $im(f) = W$.
+d. $f$ is injective if and only if $ker(f) = \left\{ 0 \right\}$.
+
+- *Proof.*
+
 
 *** Review Metrics
 - Time Spent:
@@ -713,8 +787,86 @@ $$A=\begin{pmatrix}12&6&4&-7&-3\\ -6&-3&12&7&1\\ 6&3&-8&-6&4\\ 18&9&4&-11&2\end{
 
 ** Block C: Application/Testing
 *** Task
+#+begin_quote
+1. (6 points) Using elementary row operations, compute the inverse matrix of
+   $$
+   A=\left(\begin{array}{lll}
+   3 & 2 & 0 \\
+   3 & 1 & 3 \\
+   2 & 3 & 1
+   \end{array}\right) \in M_{3}\left(\mathbb{Z}_{5}\right)
+   $$
+
+2. Solve the following:
+   a) (2 points) Define the notions kernel, image, and rank of a linear map.
+   b) (2 points) State the dimension theorem (tn. rank-nullity theorem) for linear maps.
+   c) (6 points) Prove the dimension theorem for linear maps. You do not have to prove additional theorems used in your proof, but you must clearly indicate (refer to) any theorems/propositions you use and state them precisely.
+#+end_quote
 
 *** Solution
+
+**** (1)
+
+\begin{align*}
+\left[ A \mid I \right] =
+&\left[ \begin{array}{ccc|ccc}
+3 & 2 & 0 & 1 & 0 & 0 \\
+3 & 1 & 3 & 0 & 1 & 0 \\
+2 & 3 & 1 & 0 & 0 & 1 \\
+\end{array} \right] \\
+\xrightarrow{m_{21} = 1, m_{31} = \frac{2}{3}}
+&\left[ \begin{array}{ccc|ccc}
+3 & 2           & 0 & 1             & 0 & 0 \\
+0 & -1          & 3 & -1            & 1 & 0 \\
+0 & \frac{5}{3} & 1 & -\frac{2}{3}  & 0 & 1 \\
+\end{array} \right] \\
+\xrightarrow{m_{32} = -\frac{5}{3}}
+&\left[ \begin{array}{ccc|ccc}
+3 & 2  & 0 & 1            & 0           & 0 \\
+0 & -1 & 3 & -1           & 1           & 0 \\
+0 & 0  & 6 & -\frac{7}{3} & \frac{5}{3} & 1 \\
+\end{array} \right] \\
+\xrightarrow{m_{23} = 3}
+&\left[ \begin{array}{ccc|ccc}
+3 & 2  & 0 & 1             & 0            & 0            \\
+0 & -1 & 0 & \frac{1}{6}   & \frac{1}{6}  & -\frac{1}{2} \\
+0 & 0  & 1 & -\frac{7}{18} & \frac{5}{18} & \frac{1}{6}  \\
+\end{array} \right] \\
+\xrightarrow{m_{23} = 2}
+&\left[ \begin{array}{ccc|ccc}
+3 & 0  & 0 & \frac{4}{3}   & \frac{1}{3}  & -1           \\
+0 & 1  & 0 & -\frac{1}{6}  & -\frac{1}{6} & \frac{1}{2}  \\
+0 & 0  & 1 & -\frac{7}{18} & \frac{5}{18} & \frac{1}{6}  \\
+\end{array} \right] \\
+&\left[ \begin{array}{ccc|ccc}
+1 & 0  & 0 & \frac{4}{9}   & \frac{1}{9}  & -\frac{1}{3} \\
+0 & 1  & 0 & -\frac{1}{6}  & -\frac{1}{6} & \frac{1}{2}  \\
+0 & 0  & 1 & -\frac{7}{18} & \frac{5}{18} & \frac{1}{6}  \\
+\end{array} \right] = \left[ I \mid A^{-1} \right]
+\end{align*}
+
+
+**** (2)
+
+- (a)
+
+  Let $T : V \rightarrow W$ be a linear map between vector spaces $V$ and $W$ over a field $\mathbb{F}$.
+
+  - *Kernel*
+
+    $$ker(T) = \left\{ v \in V : T(v) = 0_W \right\}$$
+
+  - *Image*
+
+    $$im(T) = \left\{ T(v) : v \in V \right\} = T(V)$$
+
+  - *Rank*
+
+    $$rank(T) = dim(im(T))$$
+
+- (b)
+
+
 
 *** Review Metrics
 - Time Spent:
