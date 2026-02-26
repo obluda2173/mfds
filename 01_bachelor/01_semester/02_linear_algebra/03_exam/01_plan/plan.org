@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-16>
-#+lastmod: <2026-02-25 18:38>
+#+lastmod: <2026-02-26 17:39>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -38,13 +38,13 @@
 
 * Day 03: Linear Maps & Systems Integration
 ** Block A: Active Computation
-- [ ] Open =ps_06.org= and complete Problem 19(a) (Complex Linear Systems).
+- [X] Open =ps_06.org= and complete Problem 19(a) (Complex Linear Systems).
 - Rationale: The Target Exam integrates complex arithmetic ($\mathbb{C}$ and $i$) heavily into calculation questions.
 ** Block B: Theory & Proof Memorization
-- [ ] Open =must_know_proofs.org= and memorize Kernel and Image properties (Proposition III.2.11).
+- [X] Open =must_know_proofs.org= and memorize Kernel and Image properties (Proposition III.2.11).
 - Rationale: This provides the necessary logic to solve "Is this a subspace?" questions and prove injectivity.
 ** Block C: Application/Testing
-- [ ] Open =past_paper_01.org=, go to the 1st Exam Date, and complete Problem 2.
+- [X] Open =past_paper_01.org=, go to the 1st Exam Date, and complete Problem 2.
 - [ ] Open =past_paper_01.org=, go to the 1st Exam Date, and complete Problem 3.
 - Rationale: Drills the Rank-Nullity proof and matrix inversions under the pressure of an alternative past paper format.
 

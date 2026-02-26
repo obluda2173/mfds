@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-21>
-#+lastmod: <2026-02-25 20:38>
+#+lastmod: <2026-02-26 17:40>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -695,7 +695,6 @@ $$A=\begin{pmatrix}12&6&4&-7&-3\\ -6&-3&12&7&1\\ 6&3&-8&-6&4\\ 18&9&4&-11&2\end{
 #+end_quote
 
 *** Solution
-
 **** (a)
 
 \begin{align*}
@@ -737,15 +736,18 @@ P_1A &=
 \end{bmatrix} \\
 \end{align*}
 
+$$l_{21} = \dfrac{2+i}{3-2i} = \dfrac{(2+i)(3+2i)}{13} = \dfrac{6 + 7i + 2i^{2}}{13} =  \dfrac{4 + 7i}{13}$$
+
 \begin{align*}
-P_1A &=
-\begin{bmatrix}
-1 & 0 & 0 & 0 \\
-0 & 1 & 0 & 0 \\
-0 & 0 & 1 & 0 \\
-0 & 0 & 0 & 1 \\
-\end{bmatrix}
-\begin{bmatrix}
+P_1A =
+&\begin{bmatrix}
+(3-2i) & (2+i)   & (-1+i) & (5)    \\
+(2+i)  & (-1+3i) & (4-i)  & (1+2i) \\
+(-2+i) & (1-4i)  & (3+2i) & (-1+i) \\
+(1+3i) & (-2)    & (2-i)  & (4+i)  \\
+\end{bmatrix} \\
+\xrightarrow{l_{21} = \dfrac{4+7i}{13}}
+&\begin{bmatrix}
 (3-2i) & (2+i)   & (-1+i) & (5)    \\
 (2+i)  & (-1+3i) & (4-i)  & (1+2i) \\
 (-2+i) & (1-4i)  & (3+2i) & (-1+i) \\
@@ -753,7 +755,7 @@ P_1A &=
 \end{bmatrix} \\
 \end{align*}
 
-$$l_{21} = \dfrac{2+i}{3-2i} = \dfrac{(2+i)(3-2i)}{13}$$
+No, I don't want to solve this bullshit.
 
 *** Review Metrics
 - Time Spent:
@@ -777,13 +779,72 @@ b. If $\hat{W} \subseteq W$ is a subspace, then $f^{-1}(\hat{W}) \subseteq V$ is
 c. $f$ is surjective if and only if $im(f) = W$.
 d. $f$ is injective if and only if $ker(f) = \left\{ 0 \right\}$.
 
-- *Proof.*
+*Proofs.*
 
+a. Let $w, w' \in f(\hat{V})$ and $\lambda \in \mathbb{F}$.
+
+   /define $w$, $w'$ to be elements of $f(\hat{V})$ (or saying differently, image of subspace $\hat{V}$ under $f$) and $\lambda$ (which is element/scalar of a field) to be used for subspace criterion (where given any linear combination $\lambda w + w' \in f(\hat{V})$, given $w, w' \in f(\hat{V}), \, \lambda \in \mathbb{F}$)/
+
+   Then there exist $v, v' \in \hat{V}$ with $f(v) = w$ and $f(v') = w'$.
+
+   /letting $w, w' \in f(\hat{V})$ strictly implies existence of $v, v' \in \hat{V} : f(v) = w, f(v') = w'$/
+
+   By linearity of $f$ we obtain $\lambda w + w' = \lambda f(v) + f(v') = f(\lambda v + v')$.
+
+   /linearity of $f$ (linear map) implies $\lambda f(v) + f(v') = f(\lambda v + v')$ (remember $\lambda w + w' = \lambda f(v) + f(v')$)/
+
+   Since $\hat{V}$ is a subspace, we have $\lambda v + v' \in \hat{V}$, and hence $\lambda w + w' \in f(\hat{V})$.
+
+   /since $\hat{V}$ is a subspace (comes from "if"), $\lambda v + v' \in \hat{V}$ and thus, $\lambda w + w' \in f(\hat{V})$/
+
+   Since also $f(0) = 0 \in f(\hat{V})$, it follows that $f(\hat{V})$ is a subspace.
+
+   /as $\hat{V}$ is a subspace $0 \in \hat{V}$ and $f(0) = 0$ (linearity of $f$) hence $0 \in f(\hat{V})$/
+
+b. Let $v, v' \in f^{-1}(\hat{W})$ and $\lambda \in \mathbb{F}$.
+
+   /defining tools for subspace criterion, in this case for $f^{-1}(\hat{W})$ (preimage of $\hat{W}$ under $f^{-1}$)/
+
+   Then $f(v), f(v') \in \hat{W}$, and therefore, $f(\lambda v + v') = \lambda f(v) + f(v') \in \hat{W}$,
+
+   /letting $v, v' \in f^{-1}(\hat{W})$ strictly implies $f(v), f(v') \in \hat{W}$. linearity of $f$ lets $f(\lambda v + v') = \lambda f(v) + f(v')$ (which are elements of $\hat{W}$). since $\hat{W}$ is a subspace (by "if") it contains any linear combination $\lambda f(v) + f(v')$/
+
+   since $\hat{W}$ is a subspace, and thus $\lambda v + v' \in f^{-1}(\hat{W})$.
+
+   /since $\hat{W}$ is a subspace, $f(\lambda v + v') \in \hat{W}$ implies there must exist an element $(\lambda v + v') \in f^{-1}(\hat{W})$ (in a preimage)/
+
+   We have $0 \in f^{-1}(\hat{W})$ because $f(0) = 0 \in \hat{W}$.
+
+   /as $f(0) = 0 \in \hat{W}$, following the same logic, $0 \in f^{-1}(\hat{W})$, covering second part of subspace criterion/
+
+   Therefore $f^{-1}(\hat{W})$ is a subspace.
+
+c. Is a definition of surjectiveness.
+
+d. If $f$ is injective, then the preimage of every singleton set has at most one element, so since $f(0) = 0$ it must be that $f^{-1}(\left\{ 0 \right\}) = \left\{ 0 \right\}$.
+
+   /proof will be two sided, as proving if and only if/
+
+   /first part of proof, pretty straight forward, if $f$ is injective, then every preimage element is "linked" to unique image element, hence, as $f(0) = 0$, it must be that the preimage of $0$ (im image) is $\left\{ 0 \right\}$ only/
+
+   Now assume that $ker(f) = \left\{ 0 \right\}$.
+
+   /second part of proof, assume kernel of $f$ is $\left\{ 0 \right\}$ only/
+
+   Let $x, y \in V$ with $f(x) = f(y)$.
+
+   /letting $x, y \in V$ with $f(x) = f(y)$ (because we will need to show $x = y$, key idea of injectiveness, no elements of preimage are mapped to the same element of image)/
+
+   Then we obtain $0 = f(x) - f(y) = f(x - y)$, and hence $x - y \in ker(f)$, therefore $x - y = 0$, so $x = y$.
+
+   /now we define $0$ in image through the difference of $f(x)$ and $f(y)$, and due to linearity of $f$, $f(x) - f(y) = f(x-y) = 0$, hence, $x-y$ must be element of $ker(f)$, and since kernel consist of only $\left\{ 0 \right\}$, $x$ must be equal to $y$/
+
+   Thus $f$ is injective.
 
 *** Review Metrics
-- Time Spent:
-- Confidence (1-5):
-- Mistakes / Takeaways:
+- Time Spent: Few hours.
+- Confidence (1-5): 4
+- Mistakes / Takeaways: Mistakes patched during annotations writing.
 
 ** Block C: Application/Testing
 *** Task
@@ -865,7 +926,6 @@ d. $f$ is injective if and only if $ker(f) = \left\{ 0 \right\}$.
     $$rank(T) = dim(im(T))$$
 
 - (b)
-
 
 
 *** Review Metrics
