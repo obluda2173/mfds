@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-16>
-#+lastmod: <2026-02-26 17:39>
+#+lastmod: <2026-02-26 18:29>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -50,7 +50,7 @@
 
 * Day 04: Matrix Algebra Mastery & Vector Space Intro
 ** Block A: Active Computation
-- [ ] Open =ps_05.org= and complete Problem 16 (Gaussian elimination and rank).
+- [X] Open =ps_05.org= and complete Problem 16 (Gaussian elimination and rank).
 - Rationale: Prof B relies on Gaussian elimination to check invertibility and rank, avoiding determinants entirely.
 ** Block B: Theory & Proof Memorization
 - [ ] Open =must_know_proofs.org= and memorize the Dimension Theorem for Sums (Proposition IV.1.4).
