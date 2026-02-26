@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-21>
-#+lastmod: <2026-02-26 18:25>
+#+lastmod: <2026-02-26 21:26>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -1105,8 +1105,24 @@ The matrix $U$ has a 2 non zero rows, hence, $Rank(A) = 2$.
 
 ** Block B: Theory & Proof Memorization
 *** Task
+#+begin_quote
+Learn and memorize the Dimension Theorem for Sums (Proposition IV.1.4).
+#+end_quote
 
 *** Solution
+
+**** Annotated Rewriting
+
+*Proposition (Sum of subspaces)*
+
+Let $W$ and $\hat{W}$ be subspaces of a $\mathbb{F}$ vector space $V$. Then:
+
+1. An element $v \in V$ lies in $W + \hat{W}$ iff there exists elements $w \in W$ and $\hat{w} \in \hat{W} : v = w + \hat{w}$.
+
+2. If $W$ and $\hat{W}$ are finite dimensional, then $W + \hat{W}$ is also finite dimensional and
+
+   $$dim(W + \hat{W}) = dim(W) + dim(\hat{W}) - dim(W \cap \hat{W})$$
+
 
 *** Review Metrics
 - Time Spent:
@@ -1115,13 +1131,82 @@ The matrix $U$ has a 2 non zero rows, hence, $Rank(A) = 2$.
 
 ** Block C: Application/Testing
 *** Task
+#+begin_quote
+(d) Compute the kernel of the linear map $T: \mathbb{C}^2 \rightarrow \mathbb{C}^2$
+
+$$T(z, w) := \begin{pmatrix} (1 + 5i)z + 2w \\ (8 + i)z + (1 - 3i)w \end{pmatrix}$$
+
+Is the map injective? (3 Points)
+#+end_quote
 
 *** Solution
 
+\begin{align*}
+A &=
+\begin{bmatrix}
+(1 + 5i) & (2)      \\
+(8 + i)  & (1 - 3i) \\
+\end{bmatrix} \\
+A
+\begin{bmatrix}
+z \\
+w \\
+\end{bmatrix} &=
+\begin{bmatrix}
+0 \\
+0 \\
+\end{bmatrix} \\
+\end{align*}
+
+
+\begin{align*}
+det(A) &= (1 + 5i)(1 - 3i) - (2)(8 + i) \\
+       &= 16 + 2i - 16 - 2i \\
+       &= 0 \\
+\end{align*}
+
+As the $det(A) = 0$, this implies matrix is not invertable. Therefore,
+- $T$ is not injective
+- $ker(T) \neq 0$
+
+\begin{align*}
+\begin{bmatrix}
+(1 + 5i) & (2)      \\
+(8 + i)  & (1 - 3i) \\
+\end{bmatrix}
+\begin{bmatrix}
+z \\
+w \\
+\end{bmatrix} &=
+\begin{bmatrix}
+0 \\
+0 \\
+\end{bmatrix} \\
+\end{align*}
+
+$$\frac{(8 + i)}{(1 + 5i)} = \frac{(8 + i)(1 - 5i)}{1^{2} - 25i^{2}} = \frac{13 - 39i}{26} = \frac{1 - 3i}{2}$$
+
+\begin{align*}
+(1 - 3i) - (\frac{1 - 3i}{2})(2) = 0 \\
+\end{align*}
+
+Hence the second row becomes $0$.
+
+So the system reduces to:
+
+\begin{align*}
+(1 + 5i)z + 2w &= 0 \\
+w = -\frac{1 + 5i}{2}z \\
+\end{align*}
+
+Thus,
+
+$$ker(T) = \left\{ z \begin{pmatrix} 1 \\ -\frac{1 + 5i}{2} \end{pmatrix} : z \in \mathbb{C} \right\}$$
+
 *** Review Metrics
-- Time Spent:
-- Confidence (1-5):
-- Mistakes / Takeaways:
+- Time Spent: 40 minutes (as I was learning from 0).
+- Confidence (1-5): 4
+- Mistakes / Takeaways: Plenty, as I was learning.
 
 * Day 05: Vector Spaces - Subspaces & Bases
 ** Block A: Active Computation

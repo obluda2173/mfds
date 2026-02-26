@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-16>
-#+lastmod: <2026-02-26 18:29>
+#+lastmod: <2026-02-26 21:26>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -56,7 +56,7 @@
 - [ ] Open =must_know_proofs.org= and memorize the Dimension Theorem for Sums (Proposition IV.1.4).
 - Rationale: This appears in historical Past Paper dates and acts as the final tier-1 verbatim candidate.
 ** Block C: Application/Testing
-- [ ] Open =exam_01.org= and complete Problem 6(d).
+- [X] Open =exam_01.org= and complete Problem 6(d).
 - Rationale: Integrates complex arithmetic directly into finding a linear map's kernel to determine injectivity.
 
 * Day 05: Vector Spaces - Subspaces & Bases
