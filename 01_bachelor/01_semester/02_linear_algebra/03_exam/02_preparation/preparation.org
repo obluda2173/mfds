@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-21>
-#+lastmod: <2026-02-26 21:26>
+#+lastmod: <2026-02-27 12:14>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -497,49 +497,51 @@ $$dim(V) = dim(im(f)) + dim(ker(f))$$
 
 We choose a basis $\left\{ b_1, \ldots, b_k \right\}$ for the subspace $ker(f) \subseteq V$.
 
-~ok, setting up basis for kernel~
+/define basis of a kernel/
 
 Since the vectors $b_i$ are linearly independent, /Corollary III.1.48(ii)/ shows they can be extended to a basis $\left\{ b_1, \ldots, b_n \right\}$ of the vector space $V$.
 
-~ok, so we now state (common sense) that the basis of kernel can be extended to span the whole vector space (keeping in mind all vectors are linearly independent)~
+/using Corollary to state the basis set can be extended (with linear independent vectors) to span the whole vector space $V$/
 
 We claim that the vectors $f(b_{k+1}), \ldots, f(b_{n}) \in W$ form a basis of the subspace $im(f) \in W$, which of course proves the theorem.
 
-~here we say that those extended basis vectors after the linear mapping all together form a basis for a subspace $im(f) \subseteq W$, which is logical~
+/outlining the whole point of the proof, to demonstrate $\left\{ f(b_{k+1}), \ldots, f(b_n) \right\}$ (extended part of initial kernel basis) is basis of image under $f$/
 
 First, /Proposition III.2.11/ tells us that vectors $f(b_1), \ldots, f(b_n)$ form a generating system of $im(f)$.
 
-~so a basis of vector space after linear mapping spans the image, got it~
+/using proposition to state $\left\{ f(b_1), \ldots, f(b_n) \right\}$ spans the $im(f)$, foundation/
 
 By construction, however, we have $f(b_1) = \ldots = f(b_k) = 0$, so $f(b_{k+1}), \ldots, f(b_n)$ also form a generating system.
 
-~mentioning that after linear mapping, some of vectors (that form kernel) result it a 0, so only $b_{k+1}, ...$ are actually spanning the image~
+/outline that only $\left\{ f(b_{k+1}), \ldots, f(b_n) \right\}$ actually spans the $im(f)$ (as linearly mapped vectors of kernel result in zero - no contribution)/
 
 On the other hand, assume that $\lambda_{k+1}, \ldots, \lambda_n \in \mathbb{F}$ are scalars such that $\lambda_{k+1}f(b_{k+1}) + \ldots + \lambda_{n}f(b_n) = 0$ holds.
 
-~just assuming there are scalars that scale the "contributing" vectors $f(b_i)$ that sum tehm all up to 0~
+/assume existence of scalars $\lambda_{k+1}, \ldots, \lambda_{n} \in \mathbb{F}$ such that, $\lambda_{k+1}f(b_{k+1}) + \ldots + \lambda_{n}f(b_n) = 0$/
 
 Then we can write the left hand side as $f(\lambda_{k+1}b_{k+1} + \ldots + \lambda_n b_n)$, hence, $\lambda_{k+1}b_{k+1} + \ldots + \lambda_n b_n \in ker(f)$.
 
-~now we perform an operation to put all those scalars and vectors indside of linear map, which of course results in a 0, which implies that this vector sum is an element of a kernel~
+/using linearity of $f$ to rewrite the scaled vector sums into the form of $f(\lambda_{k+1}b_{k+1} + \ldots + \lambda_n b_n)$, and hence, as scaled vector sum equals to zero, it is within the kernel of $f$ (by definition of a kernel $ker(T) = \left\{ T(v) = 0 : v \in V \right\}$)/
 
 By construction, the vectors $b_1, \ldots, b_k$ form a basis of this subspace, so we find scalars $\mu_1, \ldots, \mu_k \in \mathbb{F}$ such that
 
 $$\lambda_{k+1}b_{k+1} + \ldots + \lambda_nb_n = \mu_1b_1 + \ldots + \mu_kb_k$$
 
-~since the vectors $b_1, \ldots, b_k$ are a basis of a kernel, there exists scalars that can result in linear combination equal to previously found one (made of $b_{k+1}, \ldots$ and scalars)~
+/as scaled vector sum (constructed with $b_{k+1}, \ldots, b_{n}$) is in kernel, it can be written as scaled vector sum of $b_1, \ldots, b_k$, (there must exist scalars such that) $\lambda_{k+1}b_{k+1} + \ldots + \lambda_nb_n = \mu_1b_1 + \ldots + \mu_kb_k$ /
 
 But this means precisely that
 
 $$\mu_1b_1 + \ldots + \mu_kb_k - \lambda_{k+1}b_{k+1} - \ldots - \lambda_nb_n = 0$$
 
-~just rewriting previous formula~
+/rewriting the equation to further invoke property of linear independence of $b_1, \ldots, b_n$/
 
 and by linear independence of $b_1, \ldots, b_n$ this is possible only if
 
 $$\mu_1 = \ldots = \mu_k = \lambda_{k+1} = \ldots = \lambda_n = 0$$
 
-~and now stating that it is only possible if all of the scalars are equal to zero, meaning that vectors $f(b_{k+1}), \ldots, f(b_{n})$ are linearly independent, as their sum can be equal to 0 only if their scalars are equal to 0~
+/as $b_1, \ldots, b_n$ are linearly independent (as are basis of vector space $V$) the only way the total sum of scaled vectors can be equal to zero iff all scalars equal to zero, hence, as $f(b_{k+1}), \dots, f(b_n)$ are generating system of $im(f)$ and also are linear independent, they are a basis of $im(f)$/
+
+/to sum up, as $\left\{ b_1, \ldots, b_n \right\}$ is basis of vector space, let $\left\{ b_{1}, \ldots, b_k \right\}$ be basis of $ker(f)$ ($k \leq n$). the extended part obviously spans $im(f)$, and now it only needs to prove its linear independence (by using linearity and scalars operations). as extended part spans $im(f)$ and is linear independent, it is a basis of $im(f)$, which implies $dim(V) = dim(ker(f)) + dim(im(f))$/
 
 **** Personal Review
 
