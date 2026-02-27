@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-21>
-#+lastmod: <2026-02-27 12:14>
+#+lastmod: <2026-02-27 15:41>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -568,6 +568,48 @@ Since $\left\{ b_1, \ldots, b_k \right\}$ are basis, there must exist scalars $\
 Hence, $\mu_1b_1 + \ldots + \mu_kb_k - \lambda_{k+1}b_{k+1} - \ldots - \lambda_nb_n = 0$.
 
 And by linear independence of $b_1, \ldots, b_n$, this is possible iff $\mu_1 = \ldots = \mu_k = \lambda_{k+1} = \ldots = \lambda_n = 0$.
+
+**** Exam Style
+
+- *Theorem:*
+
+  For a finite dimensional vector space $V$ and a linear map $f : V \rightarrow W$, $dim(V) = dim(ker(f)) + dim(im(f))$.
+
+- *Proof:*
+
+  Let $dim(V) = n$ and $dim(ker(f)) = k$.
+
+  1. Basis Extension
+
+     Choose a basis $\left\{ b_1, \ldots, b_k \right\}$ for $ker(f)$. Extend it to basis $\left\{ b_1, \ldots, b_n \right\}$ for $V$.
+
+  2. Claim
+
+     The set $S = \left\{ b_{k+1}, \ldots, b_n \right\}$ is basis for $im(f)$.
+
+  3. Proof of Span
+
+     Let $y \in im(f)$, then $\exists x \in V : y = f(x)$. Since $\left\{ b_1, \dots, b_n \right\}$ is a basis for $V$, we can write $x = \sum_{i = 1}^n c_i b_i$. By linearity, and because $b_1, \ldots, b_k \in ker(f)$:
+
+     $$y = f\left( \sum_{i=1}^{n}c_i b_i \right) = \sum_{i=1}^{k}c_i f(b_i) + \sum_{i=k+1}^n c_i f(b_i) = \sum_{i=k+1}^n c_i f(b_i)$$
+
+     Thus, the set $S$ spans $im(f)$.
+
+  4. Proof of Linear Independence
+
+     Assume $\sum_{i=k+1}^n c_i f(b_i) = 0$. By linearity, $f(\sum_{i=k+1}^n c_i b_i) = 0$, meaning the vector $v = \sum_{i=k+1}^n c_i b_i$ is in $ker(f)$. Hence,
+
+     Because $v \in ker(f)$, it can be expressed using the kernel's basis: $v = \sum_{i=1}^k c_i b_i$. Hence,
+
+     $$\sum_{i=1}^k c_i b_i - \sum_{i=k+1}^{n} c_i b_i = 0$$
+
+     Because $\left\{ b_1, \ldots, b_n \right\}$ is a basis of $V$, all coefficients must be strictly zero. Therefore, $c_{k+1} = \ldots = c_n = 0$, proving $S$ is linearly independent.
+
+  5. Conclusion
+
+     Therefore, as $S$ spans $im(f)$ and is linearly independent, it is a basis of $im(f)$. The size of this basis is $n-k$.
+
+     Therefore, $dim(V) = dim(ker(f)) + dim(im(f))$.
 
 *** Review Metrics
 - Time Spent: Few hours, learned from zero.
