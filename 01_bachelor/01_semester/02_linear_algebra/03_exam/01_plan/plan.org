@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-16>
-#+lastmod: <2026-02-28 13:27>
+#+lastmod: <2026-02-28 15:30>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -67,8 +67,8 @@
 - [ ] Open =must_know_proofs.org= and study Subspace Criteria / Span logic (Theorem III.1.29).
 - Rationale: Grasping this logic is essential to bypass blind calculations and effectively spot trick quadratic counter-examples.
 ** Block C: Application/Testing
-- [ ] Open =exam_01.org= and complete Problem 6(a).
-- [ ] Open =exam_01.org= and complete Problem 6(c).
+- [X] Open =exam_01.org= and complete Problem 6(a).
+- [X] Open =exam_01.org= and complete Problem 6(c).
 - Rationale: Tests subspace checks on polynomials and specific quadratic constraints seen in the Target Exam.
 
 * Day 06: Linear Systems & Vector Spaces (Independence)
