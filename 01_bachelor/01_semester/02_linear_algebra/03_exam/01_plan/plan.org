@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-16>
-#+lastmod: <2026-02-26 21:26>
+#+lastmod: <2026-02-28 13:27>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -45,7 +45,7 @@
 - Rationale: This provides the necessary logic to solve "Is this a subspace?" questions and prove injectivity.
 ** Block C: Application/Testing
 - [X] Open =past_paper_01.org=, go to the 1st Exam Date, and complete Problem 2.
-- [ ] Open =past_paper_01.org=, go to the 1st Exam Date, and complete Problem 3.
+- [X] Open =past_paper_01.org=, go to the 1st Exam Date, and complete Problem 3.
 - Rationale: Drills the Rank-Nullity proof and matrix inversions under the pressure of an alternative past paper format.
 
 * Day 04: Matrix Algebra Mastery & Vector Space Intro
@@ -61,7 +61,7 @@
 
 * Day 05: Vector Spaces - Subspaces & Bases
 ** Block A: Active Computation
-- [ ] Open =ps_06.org= and complete Problem 21 (Subspace checks).
+- [X] Open =ps_06.org= and complete Problem 21 (Subspace checks).
 - Rationale: Vector space questions strictly require verifying if a given set is a subspace.
 ** Block B: Theory & Proof Memorization
 - [ ] Open =must_know_proofs.org= and study Subspace Criteria / Span logic (Theorem III.1.29).
