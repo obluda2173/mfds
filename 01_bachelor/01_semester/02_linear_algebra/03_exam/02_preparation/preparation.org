@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-21>
-#+lastmod: <2026-03-01 21:17>
+#+lastmod: <2026-03-01 21:51>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -1668,6 +1668,41 @@ $$z = a + bi : a,b \in \mathbb{R}$$
 Hence, $z = a \cdot 1 + b \cdot i$.
 
 Therefore, $\mathbb{C} = span_{\mathbb{R}}\left\{ 1, i \right\}$
+
+
+
+**** (2)
+
+To show linear independence, we consider the linear system:
+
+$$ \begin{bmatrix} 1&1&1&1 \\ 0&1&1&1 \\ 0&0&1&1 \\ 0&0&0&1 \end{bmatrix} \begin{bmatrix} c_1 \\ c_2 \\ c_3 \\ c_4 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ 0 \\ 0 \end{bmatrix} $$
+
+\begin{align*}
+(1) \cdot c_4 &= 0 &\implies c_4 &= 0 \\
+(1) \cdot c_3 + (1) \cdot c_4 &= 0 &\implies c_3 &= 0 \\
+(1) \cdot c_2 + (1) \cdot c_3 +(1) \cdot c_4 &= 0 &\implies c_2 &= 0 \\
+(1) \cdot c_1 + (1) \cdot c_2 +(1) \cdot c_3 +(1) \cdot c_4 &= 0 &\implies c_1 &= 0 \\
+\end{align*}
+
+Hence, the only solution $c = 0$, hence, the vectors are linearly independent.
+
+
+**** (3)
+
+Let $v_1, v_2, v_3$ be the columns of the matrix $A$:
+
+\begin{align*}
+A =
+\begin{bmatrix}
+i   & 1    & -1 \\
+1   & 3i+1 & 5i \\
+2+i & 2    & 5  \\
+\end{bmatrix}
+\end{align*}
+
+- Determine Rank
+
+
 
 
 
