@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-21>
-#+lastmod: <2026-02-28 15:29>
+#+lastmod: <2026-03-01 17:21>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -1206,6 +1206,91 @@ Let $W$ and $\hat{W}$ be subspaces of a $\mathbb{F}$ vector space $V$. Then:
 
    $$dim(W + \hat{W}) = dim(W) + dim(\hat{W}) - dim(W \cap \hat{W})$$
 
+*Proof.*
+
+- Setup
+
+  Let $U, W \in V$ be finite dimensional subspaces.
+
+  Let $I := U \cap W$.
+
+  Choose $B_I$ be basis of $I$.
+
+- Extend Basis
+
+  Extend $B_I$ to be basis of $U$:
+
+  $$B_U = B_I \cup B_1$$
+
+  Extend $B_I$ to be basis of $W$:
+
+  $$B_W = B_I \cup B_2$$
+
+  Observe:
+
+  $$dim(U) = |B_U| = |B_I| + |B_1|$$
+
+  $$dim(W) = |B_W| = |B_I| + |B_2|$$
+
+- Claim 1: Span
+
+  Claim, $B_I \cup B_1 \cup B_2$ spans $U + W$.
+
+  Let $v \in U + W$, hence, $v = u + w : u \in U, w \in W$. $u$ can be written as a linear combination of basis $B_U = B_I + B_1$, and $w$ as a linear combination of $B_W = B_I + B_2$, hence, $u + w$ can be represented as a linear combination of $B_I \cup B_1 \cup B_2$. Hence, $B_I \cup B_1 \cup B_2$ spans $U + W$.
+
+- Claim 2: Linear Independence
+
+  Claim, $B_I \cup B_1 \cup B_2$ is linearly independent.
+
+  Assume
+
+  $$\sum_{b \in B_I} \alpha_b b + \sum_{b \in B_1} \beta_b b + \sum_{b \in B_2} \gamma_b b = 0$$
+
+  Observe that
+
+  $$\left( \sum_{b \in B_I} \alpha_b b + \sum_{b \in B_1} \beta_b b \right) + \left( \sum_{b \in b_2} \gamma_b b \right) = 0$$
+
+  where first parenthesis is a vector in $U$ (as constructed with $B_I$ and $B_1$), while second paranthesis is a vector in $W$ (as constructed with $B_2$).
+
+  $$\left( \sum_{b \in B_I} \alpha_b b + \sum_{b \in B_1} \beta_b b \right) = - \left( \sum_{b \in b_2} \gamma_b b \right)$$
+
+  Hence, all scalars $\beta$ must be equal to zero.
+
+  As $\beta$'s equal to zero, the original equality simplifies to:
+
+  $$\sum_{b \in B_I} \alpha_b b + \sum_{b \in B_2} \gamma_b b = 0$$
+
+  Where the left side is a linear combination of $W$ basis. This forces all $\gamma$ scalars to be equal to zero, due to linear independence of the basis.
+
+  Hence, all coefficients are zero. Thus, the original vector combination of basis $B_I, B_1, B_2$ is linear independent.
+
+- Conclusion
+
+  As $B_I \cup B_1 \cup B_2$ spans $U + W$, and is linearly independent, it is a basis of $U + W$.
+
+  Therefore,
+
+  $$dim(U + W) = dim(U) + dim(W) - dim(U \cap W)$$
+
+
+
+**** Exam Style
+
+*Proof.*
+
+Let $U_1$, $U_2$ be finite dimensional subspaces of $V$. Let $\left\{ w_1, \cdots, w_k \right\}$ be basis of $U_1 \cap U_2$. Extend to a basis $\left\{ w_1, \cdots, w_k, u_1 \cdots, u_p \right\}$ of $U_1$ and a basis $\left\{ w_1, \cdots, w_k, v_1, \cdots, v_q \right\}$ of $U_2$.
+
+Claim: $B = \left\{ w_1, \cdots, w_k, u_1, \cdots, u_p, v_1, \cdots, v_q \right\}$ is basis of $U_1 + U_2$.
+
+Spanning is immediate: any $x = x_1 + x_2 \in U_1 + U_2$ can be expanded to respective basis, giving a linear combination over $B$.
+
+Linear independence: Suppose $\sum \alpha_i w_i + \sum \beta_j u_j + \sum \gamma_l v_l = 0$. Then,
+
+$$\sum \gamma_l v_l = - \sum \alpha_i w_i - \sum \beta_j u_j \in U_1$$
+
+The left side is in $U_2$, so its vector is in $U_1 \cap U_2$, hence expressible as $\sum \mu_i w_i$. Then $\sum \gamma_l v_l - \sum \mu_i w_i = 0$, and the linear independence of $U_2$ basis gives $\gamma_l = 0$ for all $l$. Substituting back, $\sum \alpha_i w_i + \sum \beta_i u_i = 0$, and the linear independence of $U_1$ basis gives $\alpha_i = \beta_j = 0$ for all $i, j$.
+
+Thus, $|B| = k + p + q = m + n - k$, i.e. $dim(U_1 + U_2) = dim(U_1) + dim(U_2) - dim(U_1 \cap U_2)$.
 
 *** Review Metrics
 - Time Spent:
@@ -1494,8 +1579,31 @@ Hence, $W$ is subspace.
 * Day 06: Linear Systems & Vector Spaces (Independence)
 ** Block A: Active Computation
 *** Task
+#+begin_quote
+Spanning sets, Linear Independence
+
+1. (2) Show that $\mathbb{C}$ is a vector space over $\mathbb{R}$ and find a small spanning set for $\mathbb{C}$.
+
+2. (4) We consider the vector space $\mathbb{F}^{4}$ for some field $\mathbb{F}$. Show that the vectors $(1,0,0,0)^{T}$, $(1,1,0,0)^{T}$, $(1,1,1,0)^{T}$ and $(1,1,1,1)^{T}$ are linearly independent.
+
+3. (6) Show that the three vectors $(i, 1, 2+i)$, $(1,3i+1,2)$ and $(-1,5i, 5)$ are a spanning set of $\mathbb{C}^{3}$. Are they linearly independent?
+#+end_quote
 
 *** Solution
+
+**** (1)
+
+- Zero Vector
+
+  It is well known that $0 \in \mathbb{C}$.
+
+- Closure Under Addition
+
+
+
+
+
+
 
 *** Review Metrics
 - Time Spent:

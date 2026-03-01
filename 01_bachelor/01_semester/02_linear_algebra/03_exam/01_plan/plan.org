@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-16>
-#+lastmod: <2026-02-28 15:30>
+#+lastmod: <2026-03-01 16:46>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -53,7 +53,7 @@
 - [X] Open =ps_05.org= and complete Problem 16 (Gaussian elimination and rank).
 - Rationale: Prof B relies on Gaussian elimination to check invertibility and rank, avoiding determinants entirely.
 ** Block B: Theory & Proof Memorization
-- [ ] Open =must_know_proofs.org= and memorize the Dimension Theorem for Sums (Proposition IV.1.4).
+- [X] Open =must_know_proofs.org= and memorize the Dimension Theorem for Sums (Proposition IV.1.4).
 - Rationale: This appears in historical Past Paper dates and acts as the final tier-1 verbatim candidate.
 ** Block C: Application/Testing
 - [X] Open =exam_01.org= and complete Problem 6(d).
