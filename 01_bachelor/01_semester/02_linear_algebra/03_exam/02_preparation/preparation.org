@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-21>
-#+lastmod: <2026-03-01 17:21>
+#+lastmod: <2026-03-01 21:17>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -1593,13 +1593,81 @@ Spanning sets, Linear Independence
 
 **** (1)
 
-- Zero Vector
+#+begin_quote
+*Definition (Vector Space)* A vector space $V$ over a field $\mathbb{F}$ is equipped with two operations:
 
-  It is well known that $0 \in \mathbb{C}$.
+- Vector addition $+ : V + V \rightarrow V$
+- Vector multiplication $\times : \mathbb{F} \times V \rightarrow V$
 
-- Closure Under Addition
+Such that the following axioms hold for all $u, v, w \in V$ and all scalars $a,b \in \mathbb{F}$:
+
+1. Associativity of addition
+
+   $(u + v) + w = u + (v + w)$
+
+2. Commutativity of addition
+
+   $u + v = v + u$
+
+3. Additive identity
+
+   $\exists 0 \in V : \forall u \in V,  u + 0 = u$
+
+4. Additive inverse
+
+   $\forall u \in V, \exists -u \in V : u + (-u) = 0$
+
+5. Distributivity over scalar additon
+
+   $(a + b) \times u = (a \times u) + (b \times u)$
+
+6. Distributivity over vector addition
+
+   $a \times (u + v) = (a \times u) + (a \times v)$
+
+7. Compatability of scalar multiplication
+
+   $a \times (b \times u) = (a \times b) \times u$
+
+8. Scalar multiplicative identity
+
+   $1 \times u = u$
+
+   Where $1$ is a multiplicative identity of $\mathbb{F}$.
+
+#+end_quote
+
+We consider:
+- Vector set: $V = \mathbb{C}$
+- Field of scalars: $\mathbb{F} = \mathbb{R}$
+- Vector addition: usual complex addition
+- Scalar multiplication: multiplication of a real with complex number
+
+Additive structure:
+1. Addition is associative
+2. Addition is commutitative
+3. The additive identity $0$ exists
+4. Every $z \in \mathbb{C}$ has additive inverse $-z$
+
+Scalar multiplication sturcture:
+Let $w, z \in \mathbb{C}$ and $a,b \in \mathbb{R}$
+1. $w(a + b) = wa + wb$
+2. $a(w + z) = aw + az$
+3. $a(bw) = (ab)w$
+4. $1z = z$
+
+Thus, all vector space axioms are satisfied.
+
+Hence, $\mathbb{C}$ is a vector space over $\mathbb{R}$.
 
 
+Every complex number can be represented as:
+
+$$z = a + bi : a,b \in \mathbb{R}$$
+
+Hence, $z = a \cdot 1 + b \cdot i$.
+
+Therefore, $\mathbb{C} = span_{\mathbb{R}}\left\{ 1, i \right\}$
 
 
 
