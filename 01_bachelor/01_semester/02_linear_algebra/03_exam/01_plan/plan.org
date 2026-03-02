@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-16>
-#+lastmod: <2026-03-02 15:27>
+#+lastmod: <2026-03-02 19:00>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -85,15 +85,15 @@
 
 * Day 07: Synthesis - Maps & Fields
 ** Block A: Active Computation
-- [ ] Open =ps_01.org= and complete Problem 1 (Verifying field definitions).
+- [X] Open =ps_01.org= and complete Problem 1 (Verifying field definitions).
 - [ ] Open =ps_01.org= and complete Problem 2(a-c) (Verifying field definitions).
 - Rationale: The Target Exam shifted significantly toward raw definitions of fields rather than just heavy calculation.
 ** Block B: Theory & Proof Memorization
 - [ ] Open =must_know_proofs.org= and study the Extension of Linear Maps logic (Proposition IV.0.1).
 - Rationale: Provides the foundational reasoning needed to properly define map composition and injectivity properties.
 ** Block C: Application/Testing
-- [ ] Open =exam_01.org= and complete Problem 1.
-- [ ] Open =exam_01.org= and complete Problem 2.
+- [X] Open =exam_01.org= and complete Problem 1.
+- [X] Open =exam_01.org= and complete Problem 2.
 - Rationale: This tests the 4-point raw definition of a field, basic injectivity, and function composition.
 
 * Day 08: Synthesis & Pre-Mock Drilling
