@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-21>
-#+lastmod: <2026-03-02 08:54>
+#+lastmod: <2026-03-02 15:27>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -1311,6 +1311,26 @@ Thus,
 
 $$dim(U_1 + U_2) = k + p + q = (p + k) + (q + k) - k = |U_1| + |U_2| - |U_1 \cap U_2|$$
 
+**** Exam Style 3
+
+Let $U_1, U_2$ be finite dimensional subspaces of $V$. Put $I := U_1 \cap U_2$ and choose a basis $B_I = \left\{ w_1, \cdots, w_k \right\}$ of $I$. Extend $B_I$ to basis $B_{U_1}$ $B_{U_2}$:
+
+$$B_{U_1} = \left\{ w_1, \cdots, w_k, u_1, \cdots, u_p \right\}, \quad B_{U_2} = \left\{ w_1, \cdots, w_k, v_1, \cdots, v_q \right\}$$
+
+Consider $B = B_I \cup \left\{ u_1, \cdots, u_p \right\} \cup \left\{ v_1, \cdots, v_q \right\}$.
+
+Every $x \in U_1 + U_2$ equals to $x_1 + x_2 : x_1 \in U_1, x_2 \in U_2$, so $B$ spans $U_1 + U_2$.
+
+For independence, suppose $\sum \alpha_i w_i + \sum \beta_j u_j + \sum \gamma_l v_l = 0$. Rearanging gives:
+
+$$\sum \gamma_l v_l = - \left( \sum \alpha_i w_i + \sum \beta_j u_j \right) \in U_1$$
+
+but the left side is in $U_2$, so $\sum \gamma_l v_l \in U_1 \cap U_2 = I$. Hence, $\sum \gamma_l v_l = \sum \mu_i w_i$ for some scalars $\mu_i$. Thus, $\sum \gamma_l v_l - \sum \mu_i w_i = 0$, and linear independence of $B_{U_1}$, forces $\gamma_l = \mu_i = 0$. Therefore, $B$ is a basis of $U_1 + U_2$.
+
+Thus,
+
+$$dim(U_1 + U_2) = k + p + q = (p + k) + (q + k) - k = |U_1| + |U_2| - |U_1 \cap U_2|$$
+
 *** Review Metrics
 - Time Spent:
 - Confidence (1-5):
@@ -1721,11 +1741,58 @@ i   & 1    & -1 \\
 
 - Determine Rank
 
+\begin{align*}
+P_1A &=
+\begin{bmatrix}
+0 & 1 & 0 \\
+1 & 0 & 0 \\
+0 & 0 & 1 \\
+\end{bmatrix}
+\begin{bmatrix}
+i   & 1    & -1 \\
+1   & 3i+1 & 5i \\
+2+i & 2    & 5  \\
+\end{bmatrix} \\
+&=
+\begin{bmatrix}
+1   & 3i+1 & 5i \\
+i   & 1    & -1 \\
+2+i & 2    & 5  \\
+\end{bmatrix}
+\end{align*}
 
+\begin{align*}
+m_{21} &= i \\
+(2, 2) &= 1 - (i)(3i + 1) = 1 + 3 - i = 4 - i \\
+(2, 3) &= -1 - (i)(5i) = -1 + 5 = 4 \\
+&\implies
+\begin{bmatrix}
+1   & 3i+1 & 5i \\
+0   & 4-i  & 4  \\
+2+i & 2    & 5  \\
+\end{bmatrix}
+\end{align*}
 
+\begin{align*}
+m_{31} &= 2 + i \\
+(3, 2) &= 2 - (2 + i)(3i + 1) = 2 - (6i + 2 - 3 + i) = 3 - 7i \\
+(3, 3) &= 5 - (2 + i)(5i) = 5 - (10i - 5) = 10 - 10i \\
+&\implies
+\begin{bmatrix}
+1 & 3i+1   & 5i       \\
+0 & 4-i    & 4        \\
+0 & 3 - 7i & 10 - 10i \\
+\end{bmatrix}
+\end{align*}
 
+\begin{align*}
+m_{32} &= \frac{(3 - 7i)(4 + i)}{(4^2 - i^2)} = \frac{19 - 25i}{17} \\
+(3, 3) &= 10 - 10i - (\frac{19 - 25i}{17})(4) = \frac{170 - 170i - 76 + 100i}{17} = \frac{94 - 70i}{17}
+\end{align*}
 
+Hence, rows are linearly independent.
 
+As, $\mathbb{C}^3$ has 3 dimensions, and given vectors are linearly independent and span $\mathbb{C}$, they form a basis.
 
 *** Review Metrics
 - Time Spent:

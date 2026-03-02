@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-16>
-#+lastmod: <2026-03-01 16:46>
+#+lastmod: <2026-03-02 15:27>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -73,7 +73,7 @@
 
 * Day 06: Linear Systems & Vector Spaces (Independence)
 ** Block A: Active Computation
-- [ ] Open =ps_06.org= and complete Problem 22 (Linear independence and spanning sets).
+- [X] Open =ps_06.org= and complete Problem 22 (Linear independence and spanning sets).
 - Rationale: Drills polynomial and complex vector independence, which are "Prof A Filter" must-knows.
 ** Block B: Theory & Proof Memorization
 - [ ] Open =must_know_proofs.org= and study Linear Independence/Basis Equivalence logic (Theorem III.1.36).
