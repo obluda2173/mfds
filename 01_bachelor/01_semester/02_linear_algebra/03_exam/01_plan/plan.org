@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-16>
-#+lastmod: <2026-03-02 19:00>
+#+lastmod: <2026-03-03 14:02>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -98,7 +98,7 @@
 
 * Day 08: Synthesis & Pre-Mock Drilling
 ** Block A: Active Computation
-- [ ] Open =past_paper_01.org=, go to the 2nd Exam Date, and complete Problem 1 (Linear map solutions).
+- [X] Open =past_paper_01.org=, go to the 2nd Exam Date, and complete Problem 1 (Linear map solutions).
 - Rationale: Rapid-fire computation of linear map images keeps your Gaussian elimination reflexes sharp.
 ** Block B: Theory & Proof Memorization
 - [ ] Open =must_know_proofs.org= and drill Steinitz (III.1.47) purely from memory.
