@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-21>
-#+lastmod: <2026-03-03 14:03>
+#+lastmod: <2026-03-03 14:24>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -1272,7 +1272,6 @@ Let $W$ and $\hat{W}$ be subspaces of a $\mathbb{F}$ vector space $V$. Then:
 
   $$dim(U + W) = dim(U) + dim(W) - dim(U \cap W)$$
 
-
 **** Exam Style
 
 *Proof.*
@@ -1328,6 +1327,35 @@ $$\sum \gamma_l v_l = - \left( \sum \alpha_i w_i + \sum \beta_j u_j \right) \in 
 but the left side is in $U_2$, so $\sum \gamma_l v_l \in U_1 \cap U_2 = I$. Hence, $\sum \gamma_l v_l = \sum \mu_i w_i$ for some scalars $\mu_i$. Thus, $\sum \gamma_l v_l - \sum \mu_i w_i = 0$, and linear independence of $B_{U_1}$, forces $\gamma_l = \mu_i = 0$. Therefore, $B$ is a basis of $U_1 + U_2$.
 
 Thus,
+
+$$dim(U_1 + U_2) = k + p + q = (p + k) + (q + k) - k = |U_1| + |U_2| - |U_1 \cap U_2|$$
+
+**** Exam Style From Memory
+
+Let $U_1, U_2$ be finite subspaces of vector space $V$. Define $I := U_1 \cap U_2$ and choose basis $B_I = \left\{ w_1, \cdots, w_k \right\}$. Extend $B_I$ to basis $U_1$ and $U_2$:
+
+$$B_{U_1} = \left\{ w_1, \cdots, w_k, u_1, \cdots, u_p \right\} \quad B_{U_2} = \left\{ w_1, \cdots, w_k, v_1, \cdots, v_q \right\}$$
+
+Claim: constructed $B = \left\{ w_1, \cdots, w_k, u_1, \cdots, u_p, v_1, \cdots v_q \right\}$ is basis of $U_1 + U_2$.
+
+Span is immediate. Let $x \in U_1 + U_2$. It can be represented as $x = x_1 + x_2 : x_1 \in U_1, x_2 \in U_2$, hence it can be represented as scalar sum of their basis $B_{U_1}$ and $B_{U_2}$.
+
+Linear independence. Assume $\sum \alpha_i w_i + \sum \beta_j u_j + \sum \gamma_l v_l = 0$. Rearange,
+
+$$\sum \gamma_l v_l = - \left( \sum \alpha_i w_i + \sum \beta_j u_j  \right) \in U_1$$
+
+As LHS is in $U_2$, the RHS must be in $U_1 \cap U_2$, and hence could be written as $\sum \mu_i w_i$. Thus,
+
+
+$$\sum \gamma_l v_l - \sum \mu_i w_i = 0$$
+
+Linear independence of $B_{U_2}$ forces all $\gamma_l = 0$. Substituting back:
+
+$$\sum \alpha_i w_i + \sum \beta_j u_j = 0$$
+
+Linear independence of $B_{U_1}$ forces $\alpha_i = \beta_j = 0$. Hence $B$ is linearly independent.
+
+Therefore, as $B$ is basis of $U_1 + U_2$,
 
 $$dim(U_1 + U_2) = k + p + q = (p + k) + (q + k) - k = |U_1| + |U_2| - |U_1 \cap U_2|$$
 
