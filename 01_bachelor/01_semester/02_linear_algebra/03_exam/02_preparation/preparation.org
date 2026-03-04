@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-21>
-#+lastmod: <2026-03-03 20:31>
+#+lastmod: <2026-03-04 12:02>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -1332,7 +1332,7 @@ $$dim(U_1 + U_2) = k + p + q = (p + k) + (q + k) - k = |U_1| + |U_2| - |U_1 \cap
 
 **** Exam Style From Memory
 
-Let $U_1, U_2$ be finite subspaces of vector space $V$. Define $I := U_1 \cap U_2$ and choose basis $B_I = \left\{ w_1, \cdots, w_k \right\}$. Extend $B_I$ to basis $U_1$ and $U_2$:
+Let $U_1, U_2$ be finite dimensional subspaces of vector space $V$. Define $I := U_1 \cap U_2$ and choose basis $B_I = \left\{ w_1, \cdots, w_k \right\}$. Extend $B_I$ to basis $U_1$ and $U_2$:
 
 $$B_{U_1} = \left\{ w_1, \cdots, w_k, u_1, \cdots, u_p \right\} \quad B_{U_2} = \left\{ w_1, \cdots, w_k, v_1, \cdots, v_q \right\}$$
 
@@ -1360,9 +1360,9 @@ Therefore, as $B$ is basis of $U_1 + U_2$,
 $$dim(U_1 + U_2) = (p + k) + (q + k) - k = dim(U_1) + dim(U_2) - dim(U_1 \cap U_2)$$
 
 *** Review Metrics
-- Time Spent:
-- Confidence (1-5):
-- Mistakes / Takeaways:
+- Time Spent: alot
+- Confidence (1-5): 5 (extremely)
+- Mistakes / Takeaways: none
 
 ** Block C: Application/Testing
 *** Task
@@ -1480,7 +1480,6 @@ To prove a set is a subspace I must check three conditions:
 2. Closure Under Addition
 
    Let $x, y \in W_1$.
-
    $(x_1 + y_1) + (x_2 + y_2) = (x_1 + x_2) + (y_1 + y_2) = 0 + 0 = 0 \implies x + y \in W_1$
 
 3. Closure Under Scalar Multiplication
@@ -1562,7 +1561,6 @@ Hence, $W_5$ is a subspace.
   The definition requires $x_1 \neq 0$. The zero vector $0 = (0,0)$ has the first component $0$.
 
 Hence $W_6$ is not a subspace.
-
 
 *** Review Metrics
 - Time Spent: 1 hour (new topic, new exercise).
@@ -2375,3 +2373,90 @@ Review all notes, mistakes, and confidence levels from Days 1-10.
 - Top 3 recurring calculation errors:
 - Weakest proof(s) to read one last time:
 - Final Strategy / Exam Execution Plan:
+
+* Extra
+
+** P1
+
+- Definition of a vector space
+
+  A vector space $V$ over a field $\mathbb{F}$, has two operations:
+
+  - Additive: $+ : V + V \rightarrow V$
+
+  - Multiplicative: $\times : \mathbb{F} \times V \rightarrow V$
+
+And must satisfy the following axioms:
+
+1. Additive associativity
+2. Additive commutativity
+3. Additive identity
+4. Additive inverse
+5. Distributivity over scalar addition
+6. Distributivity over vector addition
+7. Compatability of scalar multiplication
+8. Scalar multiplicative identity
+
+** P2
+
+- Definition of preimage
+
+  Let $f : U \rightarrow V$, and $S \subseteq V$.
+
+  $f^{-1}(S) = \left\{ u \in U : f(u) = S \right\}$
+
+- Definition of surjectivity
+
+  Let $f : U \rightarrow V$.
+
+  $\forall v \in V, \exists u \in U : f(u) = v$
+
+- Surjectivity proof
+
+  Proof $f : X \rightarrow Y$ is surjective.
+
+  1. Let $y \in Y$ be arbitrary.
+
+  2. Choose $x \in X$ such that $f(x) = y$ (creative and needs scratch work).
+
+  3. Verify that $x \in X$.
+
+  4. Verify that $f(x) = y$.
+
+  5. Conclude surjection.
+
+- Definition of inverse map
+
+  Let $f : X \rightarrow Y$.
+
+  $f^{-1}(f(x)) = x, \forall x \in X$ and $f(f^{-1}(y)) = y, \forall y \in Y$.
+
+  Where $f^{-1}$ is inverse map.
+
+** P3
+
+- LU factorisation
+
+** P4
+
+- Inverse matrix
+
+** P5
+
+- Definition of sum
+
+  $U + V = \left\{ u + v : u \in U, v \in V \right\}$
+
+- Definition of direct sum
+
+  $U \oplus V$ is $U + V$ wich satisfies $U \cap V = \left\{ 0 \right\}$
+
+- Definition of complementary
+
+  Subspace $U$ is complementary of subspace $V$, if $U \oplus V = W$, where $W$ is a vector space.
+
+- Statement and proof of Sum of Subspaces Theorem.
+
+  Known.
+
+** P6
