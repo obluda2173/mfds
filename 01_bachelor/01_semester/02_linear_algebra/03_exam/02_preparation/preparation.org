@@ -2,7 +2,7 @@
 #+author: Erik An
 #+email: obluda2173@gmail.com
 #+date: <2026-02-21>
-#+lastmod: <2026-03-03 14:24>
+#+lastmod: <2026-03-03 20:31>
 #+latex: \newpage
 #+latex_header: \setlength{\parindent}{0pt}
 #+latex_header: \setlength{\parskip}{1em}
@@ -1357,7 +1357,7 @@ Linear independence of $B_{U_1}$ forces $\alpha_i = \beta_j = 0$. Hence $B$ is l
 
 Therefore, as $B$ is basis of $U_1 + U_2$,
 
-$$dim(U_1 + U_2) = k + p + q = (p + k) + (q + k) - k = |U_1| + |U_2| - |U_1 \cap U_2|$$
+$$dim(U_1 + U_2) = (p + k) + (q + k) - k = dim(U_1) + dim(U_2) - dim(U_1 \cap U_2)$$
 
 *** Review Metrics
 - Time Spent:
@@ -1563,6 +1563,7 @@ Hence, $W_5$ is a subspace.
 
 Hence $W_6$ is not a subspace.
 
+
 *** Review Metrics
 - Time Spent: 1 hour (new topic, new exercise).
 - Confidence (1-5): 4, understood, but might struggle with new style problems.
@@ -1704,6 +1705,7 @@ Such that the following axioms hold for all $u, v, w \in V$ and all scalars $a,b
 
 #+end_quote
 
+
 We consider:
 - Vector set: $V = \mathbb{C}$
 - Field of scalars: $\mathbb{F} = \mathbb{R}$
@@ -1735,7 +1737,6 @@ $$z = a + bi : a,b \in \mathbb{R}$$
 Hence, $z = a \cdot 1 + b \cdot i$.
 
 Therefore, $\mathbb{C} = span_{\mathbb{R}}\left\{ 1, i \right\}$
-
 
 
 **** (2)
@@ -2113,8 +2114,49 @@ $$\left\{ \left( 2n, n, 3 \right) \mid \forall n \in \mathbb{Z}_{5} \right\}$$
 
 ** Block C: Application/Testing
 *** Task
+#+begin_quote
+a) (2 points) Define the notions sum, direct sum, and complement for subspaces of a vector space.
+b) (2 points) State the dimension theorem for sums of subspaces of a $K$ -vector space.
+c) (6 points) Prove the dimension theorem for sums of subspaces of a $K$ -vector space. You do not have to prove additional results used in your proof, but you must clearly indicate which theorems/propositions you use (by stating them precisely).
+#+end_quote
 
 *** Solution
+**** (a)
+
+- $V + W := \left\{ v + w : v \in V, w \in W \right\}$
+
+- $V \oplus W$ is a sum where $V \cap W = \left\{ 0 \right\}$
+
+- $W$ is a complement of $V$ iff $V \oplus W = U$
+
+**** (b) + (c)
+
+Let $U_1, U_2$ be finite subspaces of vector space $V$. Define $I := U_1 \cap U_2$ and choose basis $B_I = \left\{ w_1, \cdots, w_k \right\}$. Extend $B_I$ to basis $U_1$ and $U_2$:
+
+$$B_{U_1} = \left\{ w_1, \cdots, w_k, u_1, \cdots, u_p \right\} \quad B_{U_2} = \left\{ w_1, \cdots, w_k, v_1, \cdots, v_q \right\}$$
+
+Claim: constructed $B = \left\{ w_1, \cdots, w_k, u_1, \cdots, u_p, v_1, \cdots v_q \right\}$ is basis of $U_1 + U_2$.
+
+Span is immediate. Let $x \in U_1 + U_2$. It can be represented as $x = x_1 + x_2 : x_1 \in U_1, x_2 \in U_2$, hence it can be represented as scalar sum of their basis $B_{U_1}$ and $B_{U_2}$.
+
+Linear independence. Assume $\sum \alpha_i w_i + \sum \beta_j u_j + \sum \gamma_l v_l = 0$. Rearange,
+
+$$\sum \gamma_l v_l = - \left( \sum \alpha_i w_i + \sum \beta_j u_j  \right) \in U_1$$
+
+As LHS is in $U_2$, the RHS must be in $U_1 \cap U_2$, and hence could be written as $\sum \mu_i w_i$. Thus,
+
+
+$$\sum \gamma_l v_l - \sum \mu_i w_i = 0$$
+
+Linear independence of $B_{U_2}$ forces all $\gamma_l = 0$. Substituting back:
+
+$$\sum \alpha_i w_i + \sum \beta_j u_j = 0$$
+
+Linear independence of $B_{U_1}$ forces $\alpha_i = \beta_j = 0$. Hence $B$ is linearly independent.
+
+Therefore, as $B$ is basis of $U_1 + U_2$,
+
+$$dim(U_1 + U_2) = k + p + q = (p + k) + (q + k) - k = |U_1| + |U_2| - |U_1 \cap U_2|$$
 
 *** Review Metrics
 - Time Spent:
@@ -2124,8 +2166,128 @@ $$\left\{ \left( 2n, n, 3 \right) \mid \forall n \in \mathbb{Z}_{5} \right\}$$
 * Day 09: Timed Mock Exam 1
 ** Block A: Active Computation (Warm-up)
 *** Task
+#+begin_quote
+Let
+$$A=\begin{bmatrix}3&1&1\\ 6&3&4\\ 3&1&5\end{bmatrix}\in\mathbb{R}^{3\times3}, \quad b^{(1)}=\begin{bmatrix}1\\ 2\\ 3\end{bmatrix} \quad b^{(2)}=\begin{bmatrix}2\\ 0\\ 1\end{bmatrix}$$
+
+(a) Compute an LU factorization with pivoting, i.e. find $P$, $L$, $U$ such that $PA=LU$.
+
+(b) Using the same $P$, $L$, $U$, solve $Ax=b^{(1)}$ and $Ax=b^{(2)}$. Show the two solutions.
+#+end_quote
 
 *** Solution
+
+**** (a)
+
+\begin{align*}
+P_1\left[ A \mid b^{(1)} \right] &=
+\begin{bmatrix}
+0 & 1 & 0 \\
+1 & 0 & 0 \\
+0 & 0 & 1 \\
+\end{bmatrix}
+\left[ \begin{array}{ccc|c}
+3 & 1 & 1 & 1 \\
+6 & 3 & 4 & 2 \\
+3 & 1 & 5 & 3 \\
+\end{array} \right] \\
+&=
+\left[ \begin{array}{ccc|c}
+6 & 3 & 4 & 2 \\
+3 & 1 & 1 & 1 \\
+3 & 1 & 5 & 3 \\
+\end{array} \right]
+\end{align*}
+
+\begin{align*}
+m_{21} &= \frac{3}{6} = \frac{1}{2} \\
+(2, 2) &= 1 - (\frac{1}{2})(3) = \frac{2}{2} - \frac{3}{2} = -\frac{1}{2} \\
+(2, 3) &= 1 - (\frac{1}{2})(4) = 1 - 2 = -1 \\
+(2, 4) &= 1 - (\frac{1}{2})(2) = 0 \\
+\end{align*}
+
+\begin{align*}
+\implies
+\left[ \begin{array}{ccc|c}
+6 & 3            & 4  & 2 \\
+0 & -\frac{1}{2} & -1 & 0 \\
+3 & 1            & 5  & 3 \\
+\end{array} \right]
+\end{align*}
+
+\begin{align*}
+m_{31} &= \frac{1}{2} \\
+(3, 2) &= 1 - (\frac{1}{2})(3) = \frac{2}{2} - \frac{3}{2} = -\frac{1}{2} \\
+(3, 3) &= 5 - (\frac{1}{2})(4) = 5 - 2 = 3 \\
+(3, 4) &= 3 - (\frac{1}{2})(2) = 3 - 1 = 2 \\
+\end{align*}
+
+\begin{align*}
+\implies
+\left[ \begin{array}{ccc|c}
+6 & 3            & 4  & 2 \\
+0 & -\frac{1}{2} & -1 & 0 \\
+0 & -\frac{1}{2} & 3  & 2 \\
+\end{array} \right]
+\end{align*}
+
+\begin{align*}
+m_{32} &= 1 \\
+(3, 3) &= 3 - (1)(-1) = 4 \\
+(3, 4) &= 2 - (1)(0) = 2 \\
+\end{align*}
+
+\begin{align*}
+\implies
+\left[ \begin{array}{ccc|c}
+6 & 3            & 4  & 2 \\
+0 & -\frac{1}{2} & -1 & 0 \\
+0 & 0            & 4  & 2 \\
+\end{array} \right]
+\end{align*}
+
+Hence,
+
+\begin{align*}
+P &=
+\begin{bmatrix}
+0 & 1 & 0 \\
+1 & 0 & 0 \\
+0 & 0 & 1 \\
+\end{bmatrix} \\
+L &=
+\begin{bmatrix}
+1           & 0 & 0 \\
+\frac{1}{2} & 1 & 0 \\
+\frac{1}{2} & 1 & 1 \\
+\end{bmatrix} \\
+U &=
+\begin{bmatrix}
+6 & 3            & 4  \\
+0 & -\frac{1}{2} & -1 \\
+0 & 0            & 4  \\
+\end{bmatrix}
+\end{align*}
+
+**** (b)
+
+- $b^{(1)}$
+
+  \begin{align*}
+  \left[ \begin{array}{ccc|c}
+  6 & 3            & 4  & 2 \\
+  0 & -\frac{1}{2} & -1 & 0 \\
+  0 & 0            & 4  & 2 \\
+  \end{array} \right]
+  \end{align*}
+
+
+  \begin{align*}
+  (4)x_3 &= 2 &\implies x_3 &= \frac{1}{2} \\
+  (-\frac{1}{2})x_2 + (-1)x_3 &= 0 &\implies x_2 &= -1 \\
+  (6)x_1 + (3)x_2 + (4)x_3 &= 2 &\implies x_1 &= \frac{1}{2} \\
+  \end{align*}
+
 
 *** Review Metrics
 - Time Spent:
