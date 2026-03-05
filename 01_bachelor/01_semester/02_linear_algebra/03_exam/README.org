@@ -1,0 +1,398 @@
+#+title: Readme
+#+author: Erik An
+#+email: obluda2173@gmail.com
+#+date: <2026-03-05>
+#+lastmod: <2026-03-05 08:46>
+#+latex: \newpage
+#+latex_header: \setlength{\parindent}{0pt}
+#+latex_header: \setlength{\parskip}{1em}
+#+latex_header: \usepackage{amsmath}
+#+latex_header: \usepackage{amssymb}
+#+latex_header: \usepackage{amsthm}
+#+latex_header: \usepackage[margin=1in]{geometry}
+#+options: num:t
+#+startup: overview latexpreview inlineimages
+
+
+* OVERVIEW
+
+This document distills strategic insights from preparing for Prof B's
+Linear Algebra exam across two attempts (Feb 2026 and Mar 2026). It is
+intended as a reusable playbook for future students taking the same
+course. The methodology is empirical: we analysed past papers, identified
+structural templates, and made predictions — most of which turned out
+correct.
+
+* THE PROFESSOR'S EXAM TEMPLATE
+
+** Fixed Structure (40 points, 6 problems)
+
+Prof B uses a rigid template. The content rotates, but the skeleton does not.
+
+| Problem | Type                                | Points | Style                                   |
+|---------+-------------------------------------+--------+-----------------------------------------|
+|       1 | Pure definition recall              |      4 | "Provide the definition of X"           |
+|       2 | Map theory (define + check + prove) |      5 | 5 sub-questions, 1 point each (mostly)  |
+|       3 | LU factorization                    |      7 | "Compute using LU (with pivoting)"      |
+|       4 | Matrix inverse via row ops          |      6 | "Compute the inverse using row ops"     |
+|       5 | Definitions + theorem + proof       |     10 | 2pt defs + 2pt statement + 6pt proof    |
+|       6 | Mixed short problems                |      8 | 3-4 sub-questions, varying point values |
+
+** What Rotates Between Exam Dates
+
+*** Problem 1: Axiomatic Definitions (4pt)
+
+The professor cycles through foundational axiomatic definitions:
+
+| Exam Date   | Definition Asked        |
+|-------------+-------------------------|
+| 1st attempt | Field (9 axioms)        |
+| 2nd attempt | Vector Space (8 axioms) |
+
+*Rule*: Never repeats across consecutive dates. The next candidate
+after these two would be the definition of a linear map, or potentially
+the definition of a group/ring if the curriculum expands.
+
+*Preparation strategy*: Memorize the FULL SYMBOLIC FORM of every
+axiom. Listing axiom names scores 0. You need the actual formulas.
+
+*** Problem 2: Map Theory (5pt)
+
+The professor pairs complementary concepts across attempts:
+
+| Sub-question | 1st attempt             | 2nd attempt                     |
+|--------------+-------------------------+---------------------------------|
+| (a)          | Define f(A) (image)     | Define f⁻¹(B) (preimage)        |
+| (b)          | Define injective        | Define surjective               |
+| (c)          | Is x⁴ injective? (ℝ₊→ℝ) | Is x⁴ surjective? (ℝ₊→ℝ)        |
+| (d)+(e)      | Define composition      | Define identity map             |
+|              | Prove associativity     | Prove uniqueness of inverse map |
+
+*Rule*: The professor mirrors concepts. If he asks injective, next
+time he asks surjective. If he asks f(A), next time f⁻¹(B). The
+concrete check (c) reuses the SAME FUNCTION with the complementary
+property.
+
+*Key definitions to have ready*:
+- f(A), f⁻¹(B), injective, surjective, bijective
+- Composition, identity map, inverse map
+- Small proofs: associativity of composition, uniqueness of inverse,
+  "composition of injectives is injective", "composition of surjectives
+  is surjective"
+
+*** Problem 3 & 4: Computation (13pt)
+
+These are stable. Always 3×3 matrices over ℝ.
+
+| Problem | 1st attempt     | 2nd attempt     |
+|---------+-----------------+-----------------|
+|       3 | LU with pivot   | LU with pivot   |
+|       4 | Inverse via ops | Inverse via ops |
+
+*Preparation strategy*: Practice 3-4 LU problems and 3-4 inverse
+problems. Focus on arithmetic discipline — sign errors cascade. The
+professor uses "nice" numbers but the intermediate fractions can still
+trip you up.
+
+*Critical note on fields*: The Data Science exam uses ℝ and ℂ. The
+historical past papers (different bachelor) use ℤ₅ and ℤ₇. Be aware
+of this if using past papers for practice — the mechanics are the same
+but modular arithmetic adds complexity.
+
+*** Problem 5: The Big Proof (10pt)
+
+This is the highest-value single question. The professor pairs
+specific definition sets with specific proofs:
+
+| Definition Package              | Paired Proof                  |
+|---------------------------------+-------------------------------|
+| Kernel, image, rank             | Steinitz Exchange (III.1.47)  |
+| Kernel, image, rank             | Rank-Nullity (IV.1.10)        |
+| Sum, direct sum, complement     | Dim Theorem for Sums (IV.1.4) |
+| Subspace, sum, direct sum, comp | Dim Theorem for Sums (IV.1.4) |
+
+*Rule*: The definition package PREDICTS the proof. If you see "define
+kernel, image, rank" you know the proof will be about linear maps. If
+you see "define sum, direct sum, complement" the proof will be IV.1.4.
+
+*Critical insight*: The professor explicitly communicates which
+theorems are in the exam pool. When new theorems are added (as happened
+with IV.1.4, IV.1.10, IV.1.15 for the second attempt), recently tested
+theorems become unlikely. Use this to prioritise.
+
+*Proof priority for the two-attempt cycle*:
+
+| Attempt | What appeared                        |
+|---------+--------------------------------------|
+| 1st     | Steinitz Exchange Theorem (III.1.47) |
+| 2nd     | Dimension Theorem for Sums (IV.1.4)  |
+
+If a 3rd attempt existed, Rank-Nullity (IV.1.10) or IV.1.15 (Rank
+proposition) would be the most likely candidates.
+
+*** Problem 6: Mixed Short Problems (8pt)
+
+This block has the most variation but follows discoverable patterns.
+
+**** Sub (a): Subspace Proof (2-3pt)
+
+ALWAYS a "prove this set is a subspace" question. The specific sets rotate:
+
+| Exam        | Set to check |                                |
+|-------------+--------------+--------------------------------|
+| 1st attempt | {p ∈ ℝ[X]    | p(0) = p(1) = 0}               |
+| 2nd attempt | {v ∈ V       | h(v) = v} (fixed points)       |
+| PP 1st date | {p ∈ ℂ[X]    | p'(i) = 0}                     |
+| PP 2nd date | {v ∈ V       | h(v) = (w,w)} (diagonal image) |
+| PP 3rd date | {p ∈ ℝ[X]    | ∫₀¹ p(t)dt = 0}                |
+| PP 4th date | {v ∈ V       | h(v) = v} (fixed points again) |
+
+*Pattern*: When the main proof (P5) is about sums/complements, the
+subspace question tends to use a linear map condition (fixed points,
+preimage) rather than polynomial evaluation.
+
+*Universal template*:
+1. Zero vector: Show 0 ∈ S (plug 0 into condition, use f(0)=0)
+2. Closure: Let v, w ∈ S and λ ∈ 𝔽. Show λv + w ∈ S.
+   - Expand what "v ∈ S" means
+   - Compute condition applied to λv + w
+   - Use LINEARITY to split
+   - Substitute known facts
+   - Conclude
+
+**** Sub (b)-(c): Quick Theory Questions (1pt each)
+
+These rotate between a small set of types:
+- "Does V contain a linearly independent set of k elements?" → compare k with dim(V)
+- "Does V contain a spanning set of k elements?" → same dimension argument
+- "Is this map linear?" → check f(λv + w) = λf(v) + f(w) or find counterexample
+- "Is this map injective/surjective?" → Rank-Nullity or explicit check
+
+*Key technique*: For spanning/independence questions, the answer
+depends on comparing the number of elements with dim(V). A spanning
+set needs ≥ dim(V) elements. A linearly independent set needs ≤ dim(V)
+elements. Cite Steinitz for the bound.
+
+**** Sub (d): Computation Over ℂ (3pt)
+
+On BOTH attempts, this was: "Compute the kernel of T: ℂ² → ℂ²,
+is T injective?"
+
+| Attempt | Map                                       |
+|---------+-------------------------------------------|
+| 1st     | T(z,w) = ((1+5i)z + 2w, (8+i)z + (1-3i)w) |
+| 2nd     | T(z,w) = ((2+4i)z + 2w, (5+6i)z + (3-i)w) |
+
+*Template*:
+1. Write the coefficient matrix A
+2. Row reduce (complex arithmetic)
+3. If rank = 2: ker = {0}, injective
+4. If rank = 1: express free variable, write ker as span of one vector
+
+*Warning*: The professor MAY switch to the "for which c ∈ ℂ does
+vector (c,...) lie in im(f)?" type, which appears in EVERY past paper
+but was absent from both Data Science exams. This involves:
+1. Set up 3×2 augmented matrix with parameter c
+2. Row reduce to get [0 0 | g(c)]
+3. Set g(c) = 0, solve, write as a + bi
+
+* PROOF MEMORISATION STRATEGY
+
+** The Three Proofs You Must Know
+
+*** 1. Rank-Nullity Theorem (IV.1.10)
+
+*Structure*: Basis extension → show spanning → show linear independence.
+
+1. Choose basis {b₁,...,bₖ} for ker(f)
+2. Extend to basis {b₁,...,bₙ} for V
+3. Claim: {f(bₖ₊₁),...,f(bₙ)} is basis of im(f)
+4. Spanning: f(b₁)=...=f(bₖ)=0, so remaining images generate im(f)
+5. Independence: Assume Σcᵢf(bᵢ)=0, use linearity to get
+   Σcᵢbᵢ ∈ ker(f), express in kernel basis, invoke independence
+   of {b₁,...,bₙ} to force all coefficients = 0
+
+*Common exam errors*: Wrong subscripts (writing bₖ instead of bₙ),
+writing "{b₁,...,bₖ} is basis of V" when it should be "{b₁,...,bₙ}".
+
+*** 2. Dimension Theorem for Sums (IV.1.4)
+
+*Structure*: Shared basis extension → show spanning → show independence.
+
+1. Choose basis Bᵢ = {w₁,...,wₖ} for U₁ ∩ U₂
+2. Extend to basis of U₁: add {u₁,...,uₚ}
+3. Extend to basis of U₂: add {v₁,...,vᵧ}
+4. Claim: B = {w's, u's, v's} is basis of U₁ + U₂
+5. Spanning: immediate from definition of sum
+6. Independence: Assume Σαᵢwᵢ + Σβⱼuⱼ + Σγₗvₗ = 0
+   - Rearrange: Σγₗvₗ = -(Σαᵢwᵢ + Σβⱼuⱼ) ∈ U₁
+   - LHS ∈ U₂, so Σγₗvₗ ∈ U₁ ∩ U₂, write as Σμᵢwᵢ
+   - Independence of B_{U₂} forces γₗ = 0
+   - Substitute back, independence of B_{U₁} forces αᵢ = βⱼ = 0
+7. Count: |B| = k + p + q = dim(U₁) + dim(U₂) - dim(U₁ ∩ U₂)
+
+*** 3. Steinitz Exchange Theorem (III.1.47)
+
+Required for first attempt. Lower priority for later attempts if new
+theorems are added to the pool.
+
+Requires: Exchange Lemma (III.1.46) + inductive argument.
+
+** How to Memorise Proofs Effectively
+
+Based on what worked in this preparation:
+
+1. *Annotated rewriting*: Copy the proof, adding explanatory comments
+   after each line in your own words.
+2. *Personal review*: Rewrite from memory, check against original.
+3. *Exam-style version*: Write it as you would on the exam — clean,
+   structured, with numbered steps.
+4. *From-memory drill*: Write it cold with no reference. Repeat until
+   clean.
+
+The progression from annotated → personal → exam-style → from-memory
+took 3-4 iterations per proof and was the most effective strategy used.
+
+* PREPARATION TIMELINE RECOMMENDATIONS
+
+** If You Have 11 Days
+
+Follow the original plan structure: Days 1-6 for content, Days 7-8
+for synthesis, Days 9-10 for mock exams, Day 11 for rest.
+
+** If You Have 5-7 Days (Realistic for Second Attempt)
+
+Ruthless prioritisation:
+
+| Priority | Task                               | Points at stake |
+|----------+------------------------------------+-----------------|
+|        1 | Learn the 10-point proof           |              10 |
+|        2 | Practice LU + inverse (2 each)     |              13 |
+|        3 | Learn all definitions for P1 + P5  |               6 |
+|        4 | Review map definitions for P2      |               5 |
+|        5 | Practice subspace proofs           |               3 |
+|        6 | Practice kernel computation over ℂ |               3 |
+|        7 | One full timed mock                |           (all) |
+
+** Critical Mistakes to Avoid
+
+1. *Never skip the timed mock exam*. Knowing the material and
+   finishing under time pressure are different skills.
+2. *Arithmetic errors cascade*. One sign error in LU decomposition
+   ruins the entire 7-point problem. Write slowly, check each step.
+3. *Don't memorise proofs verbatim*. Understand the logical flow.
+   If you understand WHY each step follows from the previous one,
+   you can reconstruct the proof even if you forget the exact wording.
+4. *Use the professor's theorem list*. When the professor tells you
+   which theorems are on the exam, BELIEVE THEM. Cross-reference
+   with past papers to identify which are likely and which are
+   insurance.
+
+* PREDICTION METHODOLOGY
+
+** How We Predicted the Exam (And Accuracy)
+
+The key insight: Prof B is a creature of habit. His exams follow a
+rigid template with rotating content. By mapping the rotation pattern
+across all available exam dates, most questions become predictable.
+
+*** Prediction Accuracy for 2nd Attempt
+
+| Question | Predicted                      | Actual                           | Accuracy |
+|----------+--------------------------------+----------------------------------+----------|
+| P1       | Vector space definition        | Vector space definition          |     100% |
+| P2(a)    | Define f⁻¹(B)                  | Define f⁻¹(B)                    |     100% |
+| P2(b)    | Define surjective              | Define surjective                |     100% |
+| P2(c)    | Surjectivity check of x⁴, ℝ₊→ℝ | Surjectivity check of x⁴, ℝ₊→ℝ   |     100% |
+| P2(d)    | Define bijective + small proof | Define id + prove inverse unique |     ~60% |
+| P3       | LU factorization over ℝ        | LU factorization over ℝ          |     100% |
+| P4       | Matrix inverse via row ops     | Matrix inverse via row ops       |     100% |
+| P5       | Sum/direct sum/comp + IV.1.4   | Subspace/sum/direct sum + IV.1.4 |      95% |
+| P6(a)    | Fixed points subspace proof    | Fixed points subspace proof      |     100% |
+| P6(b)    | g∘f=id dimension argument      | Spanning set in ℝ₄[X]?           |       0% |
+| P6(c)    | Basis existence question       | Is this map linear?              |       0% |
+| P6(d)    | "For which c ∈ ℂ" computation  | Kernel + injective (repeat)      |       0% |
+
+Overall: 8/12 sub-questions exactly correct. Core structure 100%.
+
+*** Why P6(b-d) Were Mispredicted
+
+The professor chose to REPEAT the kernel+injective question from
+exam_01 on the second attempt. This violated our assumption that he
+would avoid repetition. Lesson: the no-repeat rule applies strongly
+to the high-value slots (P1, P2, P5) but NOT to the low-value mixed
+questions in P6, where he is willing to reuse question types.
+
+The spanning set question (P6b) and linearity check (P6c) are from
+a pool of ~6 short question types that rotate semi-randomly. These
+are not individually predictable, but the POOL is small enough that
+preparing all types is feasible.
+
+** The Structural Pairing Insight
+
+The single most valuable discovery: Prof B pairs definition packages
+with proof theorems. When you see which definitions are asked, you
+immediately know which proof is coming. This pairing is 100% reliable
+across all observed exam dates.
+
+Additionally, within Problem 2, the professor mirrors complementary
+concepts between consecutive exam dates (injective↔surjective,
+f(A)↔f⁻¹(B), composition↔identity).
+
+* APPENDIX: COMPLETE EXAM ARCHIVE
+
+** Exam 01 (1st Attempt, 2026-02-03)
+
+| P1 | Field definition (4pt)                                   |
+| P2 | f(A), injective, x⁴ inj?, composition, assoc proof (5pt) |
+| P3 | LU factorization (7pt)                                   |
+| P4 | Matrix inverse (6pt)                                     |
+| P5 | ker/im/rank defs + Steinitz proof (10pt)                 |
+| P6 | Poly subspace, lin indep in ℂ₅[X], quadratic trick,      |
+|    | kernel over ℂ + injective (8pt)                          |
+
+** Exam 02 (2nd Attempt, 2026-03-04)
+
+| P1 | Vector space definition (4pt)                           |
+| P2 | f⁻¹(B), surjective, x⁴ surj?, id + inverse unique (5pt) |
+| P3 | LU factorization (7pt)                                  |
+| P4 | Matrix inverse (6pt)                                    |
+| P5 | subspace/sum/direct sum/comp defs + IV.1.4 proof (10pt) |
+| P6 | Fixed points subspace, spanning in ℝ₄[X], linearity     |
+|    | check, kernel over ℂ + injective (8pt)                  |
+
+** Past Paper — 1st Date
+
+| P1 | ℤ₇ linear system (7pt)                               |
+| P2 | Inverse in ℤ₅ (6pt)                                  |
+| P3 | ker/im/rank + Rank-Nullity proof (10pt)              |
+| P4 | sum/direct sum/comp defs + image computation ℂ (7pt) |
+| P5 | p'(i)=0 subspace, inj/surj ℤ₅, lin indep Q₅[X],      |
+|    | f⁵=f ⟹ Im⊕Ker, rank equality (10pt)                 |
+
+** Past Paper — 2nd Date
+
+| P1 | ℤ₅ linear map (7pt)                                 |
+| P2 | Basis proof + change of basis in ℤ₇ (7pt)           |
+| P3 | sum/direct sum/comp + IV.1.4 proof (10pt)           |
+| P4 | dual/dual map/rank defs + image computation ℂ (8pt) |
+| P5 | h(v)=(w,w) subspace, g∘f=id?, basis ℤ₁₁⁴?,          |
+|    | complementary proof (8pt)                           |
+
+** Past Paper — 3rd Date
+
+| P1 | ℤ₅ linear map (7pt)                                 |
+| P2 | Inverse in ℤ₇ (6pt)                                 |
+| P3 | ker/im/rank + Rank-Nullity proof (10pt)             |
+| P4 | quotient/dual/annihilator defs + image comp ℂ (8pt) |
+| P5 | ∫₀¹p(t)dt=0 subspace, inj/surj ℤ₅, basis ℤ₁₁⁴?,     |
+|    | f∘f=0 ⟹ rank=1 (9pt)                               |
+
+** Past Paper — 4th Date
+
+| P1 | ℤ₅ linear map (7pt)                                 |
+| P2 | Basis proof + change of basis in ℤ₇ (7pt)           |
+| P3 | sum/direct sum/comp + IV.1.4 proof (10pt)           |
+| P4 | dual/dual map/rank defs + image computation ℂ (8pt) |
+| P5 | Fixed points subspace, g∘f=id?, basis ℤ₁₁⁴?,        |
+|    | f⁵=f ⟹ Im⊕Ker (8pt)                                |
